@@ -1,5 +1,26 @@
 # Changelog
 
+## [1.2.0](https://github.com/TheoEwzZer/TaskManagement/compare/v1.1.0...v1.2.0) (2023-11-19)
+
+
+### ✨ Features
+
+* add CreateOrganizationPage component ([8a551d9](https://github.com/TheoEwzZer/TaskManagement/commit/8a551d9d77d6e255fc2a3575093989380c7ead8c))
+* add DashboardLayout component ([412d1e9](https://github.com/TheoEwzZer/TaskManagement/commit/412d1e9669ae129854eed700dc7d5612f28a48ad))
+* add navbar component ([670cf1f](https://github.com/TheoEwzZer/TaskManagement/commit/670cf1f576b6399b80854f5712ae8e6a8c99aaaf))
+* add OrganizationIdPage component ([2d1a358](https://github.com/TheoEwzZer/TaskManagement/commit/2d1a358635df8f4b2a09a17d5b466c0d0995d35f))
+
+
+### 🔒️ Security
+
+* add authMiddleware changes to middleware.ts ([f1f8260](https://github.com/TheoEwzZer/TaskManagement/commit/f1f8260588de7af2b55c095cf41ba7012d8ea350))
+
+
+### 💄 Styles
+
+* add new primary button variant ([c675834](https://github.com/TheoEwzZer/TaskManagement/commit/c675834c1d79061a213d14c9bf330f5a10900e35))
+* update Logo component styling ([799d948](https://github.com/TheoEwzZer/TaskManagement/commit/799d948335230dd636a7fbe3431c45ecbc4b28fa))
+
 ## [1.1.0](https://github.com/TheoEwzZer/TaskManagement/compare/v1.0.0...v1.1.0) (2023-11-19)
 
 
