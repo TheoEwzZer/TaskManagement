@@ -1,5 +1,42 @@
 # Changelog
 
+## [1.3.0](https://github.com/TheoEwzZer/TaskManagement/compare/v1.2.0...v1.3.0) (2023-11-21)
+
+
+### ✨ Features
+
+* add sidebar ([b37c1fa](https://github.com/TheoEwzZer/TaskManagement/commit/b37c1fa250ffd4eb500b90eef358d51733b8513c))
+* add UI components: Accordion, Separator, Sheet, ([87f68c1](https://github.com/TheoEwzZer/TaskManagement/commit/87f68c1ddd69c84245d16df7e3156085281bc64f))
+* add useMobileSidebar hook ([a5bb7d9](https://github.com/TheoEwzZer/TaskManagement/commit/a5bb7d960eb65736becf0fc779b8fecff18236cc))
+
+
+### 🐛 Bug Fixes
+
+* update footer and navbar components semantic ([2224366](https://github.com/TheoEwzZer/TaskManagement/commit/22243665b6d8140ed5c97515d23b5b922dc0021d))
+
+
+### 🔒️ Security
+
+* add remotePatterns for images in next.config.js ([8dee68a](https://github.com/TheoEwzZer/TaskManagement/commit/8dee68ac5ed2d90aa525434dead3e3d2c51ac8b5))
+
+
+### ♻️ Code Refactoring
+
+* update ReactNode import in RootLayout ([818ec3b](https://github.com/TheoEwzZer/TaskManagement/commit/818ec3b62c04b2ecb648e782510f0f7506c32665))
+
+
+### 💄 Styles
+
+* update background padding in MarketingPage component ([031ec67](https://github.com/TheoEwzZer/TaskManagement/commit/031ec676e3e78b9ac99a52a51b00e69e43717cf5))
+
+
+### 📦 Dependencies
+
+* add new dependencies ([08496e2](https://github.com/TheoEwzZer/TaskManagement/commit/08496e2e2ca73472670b3e994ecbbaf939c384c2))
+* bump @types/node from 20.9.2 to 20.9.3 ([958e856](https://github.com/TheoEwzZer/TaskManagement/commit/958e856d8faba344aeec16517c2e103b0965efa5))
+* bump @types/react from 18.2.37 to 18.2.38 ([91e5a05](https://github.com/TheoEwzZer/TaskManagement/commit/91e5a05db918f2a5ed08ffa20e4d00f4732447f3))
+* bump @types/react-dom from 18.2.15 to 18.2.16 ([bccd549](https://github.com/TheoEwzZer/TaskManagement/commit/bccd54911895c4ca0aca419527d5b940a8ae8a6f))
+
 ## [1.2.0](https://github.com/TheoEwzZer/TaskManagement/compare/v1.1.0...v1.2.0) (2023-11-19)
 
 
