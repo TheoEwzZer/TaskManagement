@@ -20,40 +20,33 @@ const textFont: NextFont = Poppins({
 
 function MarketingPage(): ReactElement {
   return (
-    <div className="flex items-center justify-center flex-col">
-      <div
-        className={cn("flex items-center justify-center flex-col", headingFont.className)}
-      >
-        <div className="mb-4 flex items-center border shadow-sm p-4 bg-amber-100 text-amber-700 rounded-full uppercase">
-          <Medal className="h-6 w-6 mr-2" />
-          No 1 task management
+    <>
+      <div className="flex flex-col items-center justify-center py-12 px-4 md:px-10 lg:px-20 text-gray-800 ">
+        <div className="flex flex-col items-center justify-center space-y-6 text-center">
+          <div className="mb-4 flex items-center border shadow-sm p-4 bg-black text-white rounded-full uppercase">
+            <Medal className="h-6 w-6 mr-2" />
+            No 1 Task Management
+          </div>
+          <h1 className="text-4xl md:text-6xl font-bold tracking-wide leading-tight text-white">
+            TaskManagement, Boost Your Productivity
+          </h1>
+          <div className="text-2xl md:text-4xl bg-orange-600 text-white px-4 py-2 rounded-md">
+            Achieve More with Ease
+          </div>
         </div>
-        <h1 className="text-3xl md:text-6xl text-center text-neutral-800 mb-6">
-          {"TaskManagement, your productivity's"}
-        </h1>
-        <div className="text-3xl md:text-6xl bg-gradient-to-r from-fuchsia-600 to-pink-600 text-white px-4 p-2 rounded-md pb-0 w-fit">
-          advancement
+        <div className="text-lg md:text-xl lg:text-2xl mt-8 max-w-md md:max-w-2xl text-center text-white">
+          Collaborate, manage projects, and reach new productivity peaks. From high rises
+          to the home office, empower your team with TaskManagement.
         </div>
+        <Button
+          className="mt-8 bg-orange-600 hover:bg-orange-700 text-white"
+          size="lg"
+          asChild
+        >
+          <Link href="/sign-up">Get TaskManagement for Free</Link>
+        </Button>
       </div>
-      <div
-        className={cn(
-          "text-sm md:text-xl text-neutral-400 mt-4 max-w-xs md:max-w-2xl text-center mx-auto",
-          textFont.className
-        )}
-      >
-        Collaborate, manage projects, and reach new productivity peaks. From high rises to
-        the home office, the way your team works is unique - accomplish it all with
-        TaskManagement.
-      </div>
-      <Button
-        className="mt-6"
-        size="lg"
-        asChild
-      >
-        <Link href="/sign-up">Get TaskManagement for free</Link>
-      </Button>
-    </div>
+    </>
   );
 }
-
 export default MarketingPage;
