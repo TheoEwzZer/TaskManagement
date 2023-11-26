@@ -25,7 +25,7 @@ export function FormSubmit({
   children,
   disabled,
   className,
-  variant,
+  variant = "primary",
 }: FormSubmitProps): ReactElement {
   const { pending } = useFormStatus();
 
