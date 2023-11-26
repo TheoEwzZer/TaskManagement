@@ -1,5 +1,27 @@
 # Changelog
 
+## [1.6.0](https://github.com/TheoEwzZer/TaskManagement/compare/v1.5.0...v1.6.0) (2023-11-26)
+
+
+### ✨ Features
+
+* add defaults images constant ([cc61de0](https://github.com/TheoEwzZer/TaskManagement/commit/cc61de007d6dec179480faa90564d8e0a3f3c562))
+* add FormPicker component and integrate it in ([419b0dd](https://github.com/TheoEwzZer/TaskManagement/commit/419b0dd6d518ddadc4ac63b7e5abbc6f8009abe9))
+* add image validation to createBoard action ([867d49c](https://github.com/TheoEwzZer/TaskManagement/commit/867d49c91569e812ad3d19fa82f3647bb183e356))
+* add new fields to Board model ([1a5071f](https://github.com/TheoEwzZer/TaskManagement/commit/1a5071f1c169731f95b81960e2978021d2ac06a9))
+* add unsplash module ([a4d4399](https://github.com/TheoEwzZer/TaskManagement/commit/a4d4399e352e7f217fcfdb6463187bbc44df4ac5))
+* update navbar component to include form popover ([ba0ac88](https://github.com/TheoEwzZer/TaskManagement/commit/ba0ac8820b03f236ebe80aa984a997a960473eda))
+
+
+### 🔒️ Security
+
+* add image hostnames to next.config.js ([c9276fc](https://github.com/TheoEwzZer/TaskManagement/commit/c9276fc360fb31e4ac940e186c0e087870fe6ee5))
+
+
+### 📦 Dependencies
+
+* add unsplash-js package ([b3dd763](https://github.com/TheoEwzZer/TaskManagement/commit/b3dd763f7ed4e3160618c22fdab9e5e617c23969))
+
 ## [1.5.0](https://github.com/TheoEwzZer/TaskManagement/compare/v1.4.0...v1.5.0) (2023-11-26)
 
 
