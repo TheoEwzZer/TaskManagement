@@ -35,7 +35,7 @@ jobs:
               {"type":"deps","section":"📦 Dependencies","hidden":false},
               {"type":"ci","section":"⚙️ Continuous Integrations","hidden":false},
               {"type":"test","section":"✅ Tests","hidden":false},
-              {"type":"docs","section":"📝 Documentation","hidden":false}
+              {"type":"docs","section":"📝 Documentation","hidden":false},
               {"type":"merge","section":"🔀 Merge","hidden":false}
             ]
       - uses: actions/checkout@v3
