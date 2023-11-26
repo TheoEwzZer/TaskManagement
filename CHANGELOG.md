@@ -1,5 +1,18 @@
 # Changelog
 
+## [1.7.0](https://github.com/TheoEwzZer/TaskManagement/compare/v1.6.0...v1.7.0) (2023-11-26)
+
+
+### ✨ Features
+
+* add board list and add skeleton loading state ([65a2bcb](https://github.com/TheoEwzZer/TaskManagement/commit/65a2bcb658b0410d500203814d5dbc35dc18ec86))
+* add Suspense component to BoardList rendering ([f55bcd8](https://github.com/TheoEwzZer/TaskManagement/commit/f55bcd84599289e673104626e49bd7ecbada5a59))
+
+
+### ♻️ Code Refactoring
+
+* rename hints to hint ([d771fe3](https://github.com/TheoEwzZer/TaskManagement/commit/d771fe35673101d39deab4b719f690ca8ef0f862))
+
 ## [1.6.0](https://github.com/TheoEwzZer/TaskManagement/compare/v1.5.0...v1.6.0) (2023-11-26)
 
 
