@@ -1,5 +1,21 @@
 # Changelog
 
+## [1.5.0](https://github.com/TheoEwzZer/TaskManagement/compare/v1.4.0...v1.5.0) (2023-11-26)
+
+
+### ✨ Features
+
+* add BoardList ([1633e82](https://github.com/TheoEwzZer/TaskManagement/commit/1633e82717d187be26ecda8e17f382587b843f17))
+* add BoardList and Info components ([1bbb2ce](https://github.com/TheoEwzZer/TaskManagement/commit/1bbb2ce760ce66df4019eb997781f9f6a7af5f54))
+* add FormPopover component to handle form ([f0786ca](https://github.com/TheoEwzZer/TaskManagement/commit/f0786ca1a0890621df1c1a25b38ebeea7c79d688))
+* add Toaster component to PlatformLayout ([8116937](https://github.com/TheoEwzZer/TaskManagement/commit/8116937c15106ec6c598535ea46199d08e79769c))
+* add tooltip component for hints ([b95e929](https://github.com/TheoEwzZer/TaskManagement/commit/b95e929648f4fb2ad29db33a056fa26826c7453f))
+
+
+### 📦 Dependencies
+
+* add Radix UI components and Sonner library ([a6e4e7d](https://github.com/TheoEwzZer/TaskManagement/commit/a6e4e7d81b86ae2367e681f7f1675784328e6290))
+
 ## [1.4.0](https://github.com/TheoEwzZer/TaskManagement/compare/v1.3.0...v1.4.0) (2023-11-26)
 
 
