@@ -10,15 +10,24 @@ import { ActionState, createSafeAction } from "@/lib/create-safe-action";
 import { CreateBoard } from "./schema";
 
 async function handler(data: InputType): Promise<ReturnType> {
-  const { userId } = auth();
+  const { userId, orgId } = auth();
 
-  if (!userId) {
+  if (!userId || !orgId) {
     return {
       error: "Unauthorized",
     };
   }
 
-  const { title } = data;
+  const { title, image } = data;
+
+  const [imageId, imageThumbUrl, imageFullUrl, imageLinkHTML, imageUserName] =
+    image.split("|");
+
+  if (!imageId || !imageThumbUrl || !imageFullUrl || !imageLinkHTML) {
+    return {
+      error: "Missing fields. Failed to create board.",
+    };
+  }
 
   let board;
 
@@ -26,6 +35,12 @@ async function handler(data: InputType): Promise<ReturnType> {
     board = await db.board.create({
       data: {
         title,
+        orgId,
+        imageId,
+        imageThumbUrl,
+        imageFullUrl,
+        imageUserName,
+        imageLinkHTML,
       },
     });
   } catch (error) {
@@ -38,7 +53,23 @@ async function handler(data: InputType): Promise<ReturnType> {
   return { data: board };
 }
 
-export const createBoard: (data: {
-  title: string;
-}) => Promise<ActionState<{ title: string }, { id: string; title: string }>> =
-  createSafeAction(CreateBoard, handler);
+export const createBoard: (data: { title: string; image: string }) => Promise<
+  ActionState<
+    {
+      title: string;
+      image: string;
+    },
+    {
+      id: string;
+      orgId: string;
+      title: string;
+      imageId: string;
+      imageThumbUrl: string;
+      imageFullUrl: string;
+      imageUserName: string;
+      imageLinkHTML: string;
+      createdAt: Date;
+      updatedAt: Date;
+    }
+  >
+> = createSafeAction(CreateBoard, handler);
