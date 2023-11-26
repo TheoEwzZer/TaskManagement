@@ -1,9 +1,32 @@
-import { FormPopover } from "@/components/form/form-popover";
-import { Hint } from "@/components/hints";
-import { HelpCircle, User2 } from "lucide-react";
 import { ReactElement } from "react";
 
-export function BoardList(): ReactElement {
+import Link from "next/link";
+import { auth } from "@clerk/nextjs";
+import { redirect } from "next/navigation";
+import { HelpCircle, User2 } from "lucide-react";
+
+import { db } from "@/lib/db";
+import { Board } from "@prisma/client";
+import { Hint } from "@/components/hint";
+import { Skeleton } from "@/components/ui/skeleton";
+import { FormPopover } from "@/components/form/form-popover";
+
+export async function BoardList(): Promise<ReactElement> {
+  const { orgId } = auth();
+
+  if (!orgId) {
+    return redirect("/select-org");
+  }
+
+  const boards: Board[] = await db.board.findMany({
+    where: {
+      orgId,
+    },
+    orderBy: {
+      createdAt: "desc",
+    },
+  });
+
   return (
     <div className="space-y-4">
       <div className="flex items-center font-semibold text-lg text-neutral-700">
@@ -11,6 +34,19 @@ export function BoardList(): ReactElement {
         Your boards
       </div>
       <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
+        {boards.map(
+          (board: Board): ReactElement => (
+            <Link
+              key={board.id}
+              href={`/board/${board.id}`}
+              className="group relative aspect-video bg-no-repeat bg-center bg-cover bg-sky-700 rounded-sm h-full w-full p-2 overflow-hidden"
+              style={{ backgroundImage: `url(${board.imageThumbUrl})` }}
+            >
+              <div className="absolute inset-0 bg-black/30 group-hover:bg-black/40 transition" />
+              <p className="relative font-semibold text-white">{board.title}</p>
+            </Link>
+          )
+        )}
         <FormPopover
           sideOffset={10}
           side="right"
@@ -34,3 +70,18 @@ export function BoardList(): ReactElement {
     </div>
   );
 }
+
+BoardList.Skeleton = function BoardListSkeleton(): ReactElement {
+  return (
+    <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
+      <Skeleton className="aspect-video h-full w-full p-2" />
+      <Skeleton className="aspect-video h-full w-full p-2" />
+      <Skeleton className="aspect-video h-full w-full p-2" />
+      <Skeleton className="aspect-video h-full w-full p-2" />
+      <Skeleton className="aspect-video h-full w-full p-2" />
+      <Skeleton className="aspect-video h-full w-full p-2" />
+      <Skeleton className="aspect-video h-full w-full p-2" />
+      <Skeleton className="aspect-video h-full w-full p-2" />
+    </div>
+  );
+};
