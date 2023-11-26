@@ -1,5 +1,25 @@
 # Changelog
 
+## [1.8.0](https://github.com/TheoEwzZer/TaskManagement/compare/v1.7.0...v1.8.0) (2023-11-26)
+
+
+### ✨ Features
+
+* add board layout and page components ([75c0f1e](https://github.com/TheoEwzZer/TaskManagement/commit/75c0f1e1a4c7efadb2c6c9532b7469df82b59185))
+* add board navbar and options components ([ea8b0f4](https://github.com/TheoEwzZer/TaskManagement/commit/ea8b0f450c169bcc8da25c021a8bb64ed848eca0))
+* add create-board, update-board and delete-board actions ([5fe4487](https://github.com/TheoEwzZer/TaskManagement/commit/5fe44874ef630452d2ae65e186a7959320897145))
+* add generateMetadata function to retrieve ([b71ae3b](https://github.com/TheoEwzZer/TaskManagement/commit/b71ae3b6a1ec42f7f1fb05b161769ff72a876e97))
+
+
+### 💄 Styles
+
+* update button and input styles ([9da4306](https://github.com/TheoEwzZer/TaskManagement/commit/9da4306d9b23ed45a3a625f24f73468404e39480))
+
+
+### 📦 Dependencies
+
+* add lodash and @types/lodash dependencies ([ce1c916](https://github.com/TheoEwzZer/TaskManagement/commit/ce1c916a1b22280970421ec083ee8bbc3b0c6884))
+
 ## [1.7.0](https://github.com/TheoEwzZer/TaskManagement/compare/v1.6.0...v1.7.0) (2023-11-26)
 
 
