@@ -36,7 +36,7 @@ jobs:
               {"type":"ci","section":"⚙️ Continuous Integrations","hidden":false},
               {"type":"test","section":"✅ Tests","hidden":false},
               {"type":"docs","section":"📝 Documentation","hidden":false}
-              {"type":"emrge","section":"🔀 Merge","hidden":false}
+              {"type":"merge","section":"🔀 Merge","hidden":false}
             ]
       - uses: actions/checkout@v3
       - name: tag major and minor versions
