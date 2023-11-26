@@ -1,5 +1,53 @@
 # Changelog
 
+## [1.4.0](https://github.com/TheoEwzZer/TaskManagement/compare/v1.3.0...v1.4.0) (2023-11-26)
+
+
+### ✨ Features
+
+* add Board model to schema.prisma ([7771f70](https://github.com/TheoEwzZer/TaskManagement/commit/7771f704fe5f63b8413a42d33b6a916a5fee0a32))
+* add create-board and delete-board actions ([67bee2a](https://github.com/TheoEwzZer/TaskManagement/commit/67bee2a234f41b6dea93dfe8cea255357f8f54b8))
+* add form components for input, errors, and submit ([4a8c8e1](https://github.com/TheoEwzZer/TaskManagement/commit/4a8c8e121f352bd240a63d5e9356d1d2d94ffd8e))
+* add Input and Label components ([1b67ce1](https://github.com/TheoEwzZer/TaskManagement/commit/1b67ce1de9ffef0eca91d615f6ebf4be62582453))
+* add organization settings page ([b3d0afe](https://github.com/TheoEwzZer/TaskManagement/commit/b3d0afe85ad27d38c3cf72d76ac4698e5e710f07))
+
+
+### 🐛 Bug Fixes
+
+* add missing comma to documentation section ([5b308cb](https://github.com/TheoEwzZer/TaskManagement/commit/5b308cb10cfd77152a3eadbd4b3e59e814b1263d))
+* fix typo in release-please.yml ([0ec088a](https://github.com/TheoEwzZer/TaskManagement/commit/0ec088ae4863190eab018ecd65ab6d73693f28f1))
+
+
+### 🔒️ Security
+
+* add createSafeAction function to handle safe ([f42707a](https://github.com/TheoEwzZer/TaskManagement/commit/f42707a2c28925ab30e2f541e34eb409bbcb9cef))
+
+
+### 💄 Styles
+
+* add logo image ([4854f81](https://github.com/TheoEwzZer/TaskManagement/commit/4854f813ce10ad2710a1965a7cf5242f0a754346))
+* update marketing page style ([2410179](https://github.com/TheoEwzZer/TaskManagement/commit/24101792cae6f16d9b7d492e126f00d043db0961))
+
+
+### 🔧 Other
+
+* add database configuration file ([3d8c887](https://github.com/TheoEwzZer/TaskManagement/commit/3d8c88775860bc83b98005c188a3ed69febea753))
+* add useAction hook for handling async actions ([3c778c8](https://github.com/TheoEwzZer/TaskManagement/commit/3c778c8c4565f7ad4238ac5f1c3f98a242f4bc88))
+
+
+### 📦 Dependencies
+
+* add new dependencies for @prisma/client, ([7a59468](https://github.com/TheoEwzZer/TaskManagement/commit/7a59468e626921c9685a2b6a8afc5a0eea0fc6f6))
+* bump @clerk/nextjs from 4.27.1 to 4.27.2 ([fd32b0c](https://github.com/TheoEwzZer/TaskManagement/commit/fd32b0cbd3b3b4975dda37c6a1f0e8d472dccfd0))
+* bump @types/node from 20.9.3 to 20.9.4 ([346eb1f](https://github.com/TheoEwzZer/TaskManagement/commit/346eb1ff3b8bbc8aad1b5460f1c7256cb9708bcf))
+* bump @types/node from 20.9.4 to 20.10.0 ([82a50af](https://github.com/TheoEwzZer/TaskManagement/commit/82a50afa746008fc5fc9df48fcc50cdfa483aea7))
+* bump @types/react-dom from 18.2.16 to 18.2.17 ([3de4f25](https://github.com/TheoEwzZer/TaskManagement/commit/3de4f25c7639ad555e0c61853ad3796c779853f0))
+
+
+### 🔀 Merge
+
+* merge branch 'main' of https://github.com/TheoEwzZer/TaskManagement ([5d92371](https://github.com/TheoEwzZer/TaskManagement/commit/5d92371c3e20be33beda3c2bc597100dc1ce1921))
+
 ## [1.3.0](https://github.com/TheoEwzZer/TaskManagement/compare/v1.2.0...v1.3.0) (2023-11-21)
 
 
