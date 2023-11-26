@@ -7,7 +7,7 @@ import { db } from "@/lib/db";
 
 import { InputType, ReturnType } from "./types";
 import { ActionState, createSafeAction } from "@/lib/create-safe-action";
-import { CreateBoard } from "./schema";
+import { UpdateBoard } from "./schema";
 import { Board } from "@prisma/client";
 
 async function handler(data: InputType): Promise<ReturnType> {
@@ -19,34 +19,23 @@ async function handler(data: InputType): Promise<ReturnType> {
     };
   }
 
-  const { title, image } = data;
-
-  const [imageId, imageThumbUrl, imageFullUrl, imageLinkHTML, imageUserName] =
-    image.split("|");
-
-  if (!imageId || !imageThumbUrl || !imageFullUrl || !imageLinkHTML) {
-    return {
-      error: "Missing fields. Failed to create board.",
-    };
-  }
+  const { title, id } = data;
 
   let board: Board;
 
   try {
-    board = await db.board.create({
+    board = await db.board.update({
+      where: {
+        id,
+        orgId,
+      },
       data: {
         title,
-        orgId,
-        imageId,
-        imageThumbUrl,
-        imageFullUrl,
-        imageUserName,
-        imageLinkHTML,
       },
     });
   } catch (error) {
     return {
-      error: "Failed to create.",
+      error: "Failed to update.",
     };
   }
 
@@ -54,10 +43,10 @@ async function handler(data: InputType): Promise<ReturnType> {
   return { data: board };
 }
 
-export const createBoard: (data: {
+export const updateBoard: (data: {
   title: string;
-  image: string;
-}) => Promise<ActionState<{ title: string; image: string }, Board>> = createSafeAction(
-  CreateBoard,
+  id: string;
+}) => Promise<ActionState<{ title: string; id: string }, Board>> = createSafeAction(
+  UpdateBoard,
   handler
 );
