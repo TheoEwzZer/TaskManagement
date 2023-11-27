@@ -1,9 +1,17 @@
 "use client";
-import { motion } from "framer-motion";
-import React, { useState } from "react";
 
-function Testimonials() {
-  const testimonies = [
+import React, { ReactElement, useState } from "react";
+
+import { motion } from "framer-motion";
+
+interface Testimony {
+  id: number;
+  name: string;
+  comment: string;
+}
+
+function Testimonials(): ReactElement {
+  const testimonies: Testimony[] = [
     {
       id: 1,
       name: "John Doe",
@@ -30,16 +38,16 @@ function Testimonials() {
     },
   ];
 
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const [direction, setDirection] = useState(1); // 1: forward, -1: backward
+  const [currentIndex, setCurrentIndex] = useState<number>(0);
+  const [direction, setDirection] = useState<number>(1); // 1: forward, -1: backward
 
-  const nextTestimonial = () => {
-    setCurrentIndex((prevIndex) => (prevIndex + 1) % testimonies.length);
+  const nextTestimonial: () => void = (): void => {
+    setCurrentIndex((prevIndex: number): number => (prevIndex + 1) % testimonies.length);
     setDirection(1);
   };
 
-  const prevTestimonial = () => {
-    setCurrentIndex((prevIndex) =>
+  const prevTestimonial: () => void = (): void => {
+    setCurrentIndex((prevIndex: number): number =>
       prevIndex === 0 ? testimonies.length - 1 : prevIndex - 1
     );
     setDirection(-1);
