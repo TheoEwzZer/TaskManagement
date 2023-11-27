@@ -22,7 +22,12 @@ function MarketingPage(): ReactElement {
   return (
     <>
       <div className="flex flex-col items-center justify-center py-12 px-4 md:px-10 lg:px-20 text-gray-800 pb-20">
-        <div className="flex flex-col items-center justify-center space-y-6 text-center">
+        <div
+          className={cn(
+            "flex flex-col items-center justify-center space-y-6 text-center",
+            headingFont.className
+          )}
+        >
           <div className="mb-4 flex items-center border shadow-sm p-4 bg-black text-white rounded-full uppercase">
             <Medal className="h-6 w-6 mr-2" />
             No 1 Task Management
@@ -37,7 +42,12 @@ function MarketingPage(): ReactElement {
           </div>
           <br></br>
         </div>
-        <div className="text-lg md:text-xl lg:text-2xl mt-8 max-w-md md:max-w-2xl text-center text-white">
+        <div
+          className={cn(
+            "text-lg md:text-xl lg:text-2xl mt-8 max-w-md md:max-w-2xl text-center text-white",
+            textFont.className
+          )}
+        >
           Collaborate, manage projects, and reach new productivity peaks. From high rises
           to the home office, empower your team with TaskManagement.
         </div>
