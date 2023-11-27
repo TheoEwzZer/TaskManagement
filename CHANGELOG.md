@@ -1,5 +1,24 @@
 # Changelog
 
+## [1.10.0](https://github.com/TheoEwzZer/TaskManagement/compare/v1.9.0...v1.10.0) (2023-11-27)
+
+
+### ✨ Features
+
+* add list item component and list header component ([a3bbece](https://github.com/TheoEwzZer/TaskManagement/commit/a3bbece46511c19bed3ac8a7926e088840d748f8))
+* add updateList action to update list ([c1f27cd](https://github.com/TheoEwzZer/TaskManagement/commit/c1f27cd63287f288ba67c6f9eda0ef67152ee51e))
+
+
+### ♻️ Code Refactoring
+
+* refactor testimonial component and add ([d8700b0](https://github.com/TheoEwzZer/TaskManagement/commit/d8700b018eabfc3d9b31ec6a1daf91b49cb81342))
+* refactor testimonials component to use TypeScript ([6fd960c](https://github.com/TheoEwzZer/TaskManagement/commit/6fd960c40705dcc04f3f1cb7dcd80834baf3c362))
+
+
+### 💄 Styles
+
+* update styling and fonts in MarketingPage component ([5368461](https://github.com/TheoEwzZer/TaskManagement/commit/5368461cc9b60bb0639dbe584fdeed2909fbc5ac))
+
 ## [1.9.0](https://github.com/TheoEwzZer/TaskManagement/compare/v1.8.0...v1.9.0) (2023-11-27)
 
 
