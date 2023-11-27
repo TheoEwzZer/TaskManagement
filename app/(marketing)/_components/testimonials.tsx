@@ -1,13 +1,41 @@
 "use client";
 
-import React, { ReactElement, useState } from "react";
+import { ReactElement } from "react";
 
 import { motion } from "framer-motion";
+import { Testimony, useTestimonial } from "@/hooks/use-testimonial";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 
-interface Testimony {
-  id: number;
-  name: string;
-  comment: string;
+import { Button } from "@/components/ui/button";
+
+const FORWARD = 1;
+const BACKWARD = -1;
+
+type TestimonialProps = {
+  testimonial: Testimony;
+  direction: typeof FORWARD | typeof BACKWARD;
+};
+
+function Testimonial({ testimonial, direction }: TestimonialProps): ReactElement {
+  return (
+    <motion.div
+      className="testimonial-item"
+      initial={
+        direction === FORWARD ? { opacity: 0, x: "100%" } : { opacity: 0, x: "-100%" }
+      }
+      animate={{ opacity: 1, x: 0 }}
+      exit={
+        direction === FORWARD ? { opacity: 0, x: "-100%" } : { opacity: 0, x: "100%" }
+      }
+      transition={{ duration: 0.5 }}
+      key={testimonial.id}
+    >
+      <div>
+        <p className="text-lg font-semibold mb-2">{testimonial.name}</p>
+        <p className="text-sm text-gray-600">{testimonial.comment}</p>
+      </div>
+    </motion.div>
+  );
 }
 
 function Testimonials(): ReactElement {
@@ -38,20 +66,8 @@ function Testimonials(): ReactElement {
     },
   ];
 
-  const [currentIndex, setCurrentIndex] = useState<number>(0);
-  const [direction, setDirection] = useState<number>(1); // 1: forward, -1: backward
-
-  const nextTestimonial: () => void = (): void => {
-    setCurrentIndex((prevIndex: number): number => (prevIndex + 1) % testimonies.length);
-    setDirection(1);
-  };
-
-  const prevTestimonial: () => void = (): void => {
-    setCurrentIndex((prevIndex: number): number =>
-      prevIndex === 0 ? testimonies.length - 1 : prevIndex - 1
-    );
-    setDirection(-1);
-  };
+  const { currentIndex, direction, nextTestimonial, prevTestimonial } =
+    useTestimonial(testimonies);
 
   return (
     <div className="container mx-auto py-12">
@@ -59,70 +75,29 @@ function Testimonials(): ReactElement {
         Testimonials
       </h2>
       <div className="flex items-center justify-center mb-4">
-        <button
-          className="arrow arrow-left"
+        <Button
+          variant="link"
           onClick={prevTestimonial}
-          style={{ marginRight: "16px" }}
+          className="mr-4"
         >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            className="h-8 w-8"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth={2}
-              d="M15 19l-7-7 7-7"
-            />
-          </svg>
-        </button>
+          <ChevronLeft className="h-10 w-10" />
+        </Button>
         <motion.div
           className="testimonial-container shadow-xl rounded-xl p-8 bg-gray-200 font-bold overflow-hidden relative"
           style={{ width: "900px", height: "150px" }}
         >
-          <motion.div
-            className="testimonial-item"
-            initial={
-              direction === 1 ? { opacity: 0, x: "100%" } : { opacity: 0, x: "-100%" }
-            }
-            animate={{ opacity: 1, x: 0 }}
-            exit={
-              direction === 1 ? { opacity: 0, x: "-100%" } : { opacity: 0, x: "100%" }
-            }
-            transition={{ duration: 0.5 }}
-            key={testimonies[currentIndex].id}
-          >
-            <div>
-              <p className="text-lg font-semibold mb-2">
-                {testimonies[currentIndex].name}
-              </p>
-              <p className="text-sm text-gray-600">{testimonies[currentIndex].comment}</p>
-            </div>
-          </motion.div>
+          <Testimonial
+            testimonial={testimonies[currentIndex]}
+            direction={direction}
+          />
         </motion.div>
-        <button
-          className="arrow arrow-right"
+        <Button
+          variant="link"
           onClick={nextTestimonial}
-          style={{ marginLeft: "16px" }}
+          className="ml-4"
         >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            className="h-8 w-8"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth={2}
-              d="M9 5l7 7-7 7"
-            />
-          </svg>
-        </button>
+          <ChevronRight className="h-10 w-10" />
+        </Button>
       </div>
     </div>
   );
