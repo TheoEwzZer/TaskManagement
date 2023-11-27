@@ -1,5 +1,39 @@
 # Changelog
 
+## [1.9.0](https://github.com/TheoEwzZer/TaskManagement/compare/v1.8.0...v1.9.0) (2023-11-27)
+
+
+### ✨ Features
+
+* add createList action and schema ([701b6a8](https://github.com/TheoEwzZer/TaskManagement/commit/701b6a80589a4193c7d76e654f2e1a4125f88903))
+* add List and Card models to schema.prisma ([ae7800c](https://github.com/TheoEwzZer/TaskManagement/commit/ae7800cabaf9cff36d04db9e031ccb8f7d0d6f0c))
+* add list container and list form components ([6fe9975](https://github.com/TheoEwzZer/TaskManagement/commit/6fe9975eb1659ac42d5fe9b69d5d31223b989d4c))
+* refactor board/[boardId]/page.tsx to include ([5f24603](https://github.com/TheoEwzZer/TaskManagement/commit/5f24603db7fa7e0fbeb309c85a43dbae31941056))
+
+
+### 🐛 Bug Fixes
+
+* fix router push path in FormPopover component ([2b2ce0a](https://github.com/TheoEwzZer/TaskManagement/commit/2b2ce0a9adbc7352d63f1bb2ae8c781d02ea5168))
+
+
+### ♻️ Code Refactoring
+
+* add types for ListWithCards and CardWithList ([1f4e51e](https://github.com/TheoEwzZer/TaskManagement/commit/1f4e51e78e006bbf36b21e434fcf03cb7493c710))
+* Refactor Skeleton component import ([b2ec797](https://github.com/TheoEwzZer/TaskManagement/commit/b2ec7974d716ba3a3a54e8b03b17c29772bd557e))
+
+
+### 💄 Styles
+
+* add features and testimonials in home page ([3d32518](https://github.com/TheoEwzZer/TaskManagement/commit/3d325184c668d29c7fe19cd82111185bf02bd0df))
+* complete layout for the home page ([991335a](https://github.com/TheoEwzZer/TaskManagement/commit/991335a216a98508e08fc522f7c0768b19db4e02))
+* update navbar component ([e65c5dc](https://github.com/TheoEwzZer/TaskManagement/commit/e65c5dc09b30977e1f39b5b385262337e22f57b5))
+
+
+### 📦 Dependencies
+
+* bump lucide-react from 0.292.0 to 0.293.0 ([7841dbe](https://github.com/TheoEwzZer/TaskManagement/commit/7841dbe646cdf1ac0f3918beb02226a0b26efc8d))
+* update package json ([5ef7c79](https://github.com/TheoEwzZer/TaskManagement/commit/5ef7c799c6700a9733a7e5c01040637c36e96cdb))
+
 ## [1.8.0](https://github.com/TheoEwzZer/TaskManagement/compare/v1.7.0...v1.8.0) (2023-11-26)
 
 
