@@ -1,5 +1,34 @@
 # Changelog
 
+## [1.11.0](https://github.com/TheoEwzZer/TaskManagement/compare/v1.10.0...v1.11.0) (2023-11-28)
+
+
+### ✨ Features
+
+* add CardForm component ([07302fa](https://github.com/TheoEwzZer/TaskManagement/commit/07302faea9a99122fd521d5474429b98f5f90663))
+* add CardItem component ([ea2992d](https://github.com/TheoEwzZer/TaskManagement/commit/ea2992d531d5b6bfc2993e484ab349e3634923b3))
+* add copyList action to copy a list with cards ([b7b6fe8](https://github.com/TheoEwzZer/TaskManagement/commit/b7b6fe8654bed7d91204e3902e0782de9496182a))
+* add create-card action and schema ([b11ea5c](https://github.com/TheoEwzZer/TaskManagement/commit/b11ea5c66563c5bc69d76e472ed810e81b3a8cff))
+* add deleteList action and schema ([9bd9796](https://github.com/TheoEwzZer/TaskManagement/commit/9bd979660a399b574667851d6b1dc9bcdefd01e3))
+* add drag and drop functionality to card items and ([a1e5e7c](https://github.com/TheoEwzZer/TaskManagement/commit/a1e5e7c6f97e947145c2edb3fabf964c0daa7c3b))
+* add FormTextarea component ([751b5db](https://github.com/TheoEwzZer/TaskManagement/commit/751b5dbac0e42fb51cad52842278826b7ceb3e25))
+* add ListOptions component to ListHeader ([4d976dd](https://github.com/TheoEwzZer/TaskManagement/commit/4d976dd76ef613b6019b4b69d04f67858074c5f8))
+* add Textarea component ([4fdac67](https://github.com/TheoEwzZer/TaskManagement/commit/4fdac6708f58d2ae5e4896f7b85d45caf5d9c830))
+* add update card order action ([2a695ef](https://github.com/TheoEwzZer/TaskManagement/commit/2a695efef3424c4f08bc91118c5df7d656bb37c6))
+* add update list order action ([fd5274c](https://github.com/TheoEwzZer/TaskManagement/commit/fd5274c8b6a86c26a5d3861152c5f05d77cbc9a9))
+
+
+### 🐛 Bug Fixes
+
+* update title validation error in create-card and ([216e866](https://github.com/TheoEwzZer/TaskManagement/commit/216e86672dba3d4710549b97f867645b5f8c9ca4))
+
+
+### 📦 Dependencies
+
+* add @hello-pangea/dnd dependency ([a8ddcf4](https://github.com/TheoEwzZer/TaskManagement/commit/a8ddcf4f23d029815d9e34a1cf9b91310734b924))
+* bump @types/react from 18.2.38 to 18.2.39 ([6eee1ad](https://github.com/TheoEwzZer/TaskManagement/commit/6eee1ad1c43679a7ed5bacdcec9e8d00b5309ae3))
+* bump zustand from 4.4.6 to 4.4.7 ([609d37e](https://github.com/TheoEwzZer/TaskManagement/commit/609d37eaa5575954af7a20d8101511c7ac4bcfd1))
+
 ## [1.10.0](https://github.com/TheoEwzZer/TaskManagement/compare/v1.9.0...v1.10.0) (2023-11-27)
 
 
