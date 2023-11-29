@@ -1,5 +1,40 @@
 # Changelog
 
+## [1.12.0](https://github.com/TheoEwzZer/TaskManagement/compare/v1.11.0...v1.12.0) (2023-11-29)
+
+
+### ✨ Features
+
+* add card modal functionality to CardItem component ([f5748e9](https://github.com/TheoEwzZer/TaskManagement/commit/f5748e996849d9c631cb5ea4ebbccfac4a5cfb97))
+* add CardModal component with Header ([8bd9028](https://github.com/TheoEwzZer/TaskManagement/commit/8bd9028fbf09421ca46494133b394676daf0e7c2))
+* add modal and query providers ([8459a98](https://github.com/TheoEwzZer/TaskManagement/commit/8459a98e09004b25ff1c1676b5357dc83832c89c))
+* add QueryProvider and ModalProvider to ([c7d3400](https://github.com/TheoEwzZer/TaskManagement/commit/c7d34006a492f750baf6141d5486dab64ac17ca0))
+* add route for retrieving card details ([e7b5e64](https://github.com/TheoEwzZer/TaskManagement/commit/e7b5e647dcd7747bdc5fe3a1a768b24b0cff1e4e))
+* add updateCard action and schema ([56fe6cc](https://github.com/TheoEwzZer/TaskManagement/commit/56fe6cc6bd56b17c21fd7b673dc6a88bd9eb441d))
+* add useCardModal hook for managing card modal state ([625d94c](https://github.com/TheoEwzZer/TaskManagement/commit/625d94c8aeaf5df5d8ea163816038300a7c94cd5))
+
+
+### ♻️ Code Refactoring
+
+* add CardWithListTitle type definition ([ffa7f6b](https://github.com/TheoEwzZer/TaskManagement/commit/ffa7f6b43f5ed37b0606fe922dd6b7faa391a81c))
+
+
+### 💄 Styles
+
+* add dialog component ([1e5a529](https://github.com/TheoEwzZer/TaskManagement/commit/1e5a5298b415c20c675a8471919f105f8871cbdc))
+
+
+### 🔧 Other
+
+* add fetcher function to handle API requests ([7d99d9f](https://github.com/TheoEwzZer/TaskManagement/commit/7d99d9f24ca18b9f67b587ac6e989661490581a9))
+
+
+### 📦 Dependencies
+
+* add @tanstack/react-query package ([102ff79](https://github.com/TheoEwzZer/TaskManagement/commit/102ff7931811b717a5d4328ef1962f2f1a4af15a))
+* bump lucide-react from 0.293.0 to 0.294.0 ([851e708](https://github.com/TheoEwzZer/TaskManagement/commit/851e708575df299352f1f225a7c86e0c618c5419))
+* bump sonner from 1.2.3 to 1.2.4 ([07dbc29](https://github.com/TheoEwzZer/TaskManagement/commit/07dbc295f3459b3f82aa60274522956f7bc83c69))
+
 ## [1.11.0](https://github.com/TheoEwzZer/TaskManagement/compare/v1.10.0...v1.11.0) (2023-11-28)
 
 
