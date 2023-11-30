@@ -40,7 +40,7 @@ async function handler(data: InputType): Promise<ReturnType> {
       entityId: card.id,
       entityType: ENTITY_TYPE.CARD,
       entityTitle: card.title,
-      action: ACTION.CREATE,
+      action: ACTION.DELETE,
     });
   } catch (error) {
     return {

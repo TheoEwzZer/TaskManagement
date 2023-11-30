@@ -36,7 +36,7 @@ async function handler(data: InputType): Promise<ReturnType> {
       entityId: board.id,
       entityType: ENTITY_TYPE.BOARD,
       entityTitle: board.title,
-      action: ACTION.CREATE,
+      action: ACTION.DELETE,
     });
   } catch (error) {
     return {

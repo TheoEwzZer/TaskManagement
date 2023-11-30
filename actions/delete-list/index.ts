@@ -45,7 +45,7 @@ async function handler(data: InputType): Promise<ReturnType> {
       entityId: list.id,
       entityType: ENTITY_TYPE.LIST,
       entityTitle: list.title,
-      action: ACTION.CREATE,
+      action: ACTION.DELETE,
     });
   } catch (error) {
     return {
