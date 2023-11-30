@@ -1,5 +1,39 @@
 # Changelog
 
+## [1.14.0](https://github.com/TheoEwzZer/TaskManagement/compare/v1.13.0...v1.14.0) (2023-11-30)
+
+
+### ✨ Features
+
+* add Activity component to CardModal ([4fdca34](https://github.com/TheoEwzZer/TaskManagement/commit/4fdca344c99775cf1456e2c161094b9987e3c408))
+* add activity list component to organization dashboard ([684004e](https://github.com/TheoEwzZer/TaskManagement/commit/684004eede80bf0d44d3a296cd18a13b9fcb86ff))
+* add ActivityItem component ([e7a5e9c](https://github.com/TheoEwzZer/TaskManagement/commit/e7a5e9c58607c0853ec5ae524a2da6dbc0d75a22))
+* add audit log for card creation ([87db908](https://github.com/TheoEwzZer/TaskManagement/commit/87db908730077bfde40d7dff9083d86c9980b92d))
+* add auditlog for every actions ([3f42ac1](https://github.com/TheoEwzZer/TaskManagement/commit/3f42ac106d99f4306db058c977d21ba39df69d9d))
+* add AuditLog model to schema.prisma ([1cb7cb0](https://github.com/TheoEwzZer/TaskManagement/commit/1cb7cb05958640b25b1205a43a6d23a244c75fa1))
+* add createAuditLog function for logging audit trail ([a6c1ac3](https://github.com/TheoEwzZer/TaskManagement/commit/a6c1ac35786cf66c3437313b01c625b5bf31bc97))
+
+
+### 🐛 Bug Fixes
+
+* fix actions ([073bcc5](https://github.com/TheoEwzZer/TaskManagement/commit/073bcc5fe6bda27b6ab0df614b671dad012a2520))
+
+
+### 💄 Styles
+
+* add Avatar component ([7834a78](https://github.com/TheoEwzZer/TaskManagement/commit/7834a78e979969cab8f43d9aad26150393427b8d))
+
+
+### 🔧 Other
+
+* add generateLogMessage function to generate log messages for different actions ([ba614d9](https://github.com/TheoEwzZer/TaskManagement/commit/ba614d9541e409457d68ca6e620333ef24dbf5bd))
+* add route for retrieving audit logs for a specific card ([513d938](https://github.com/TheoEwzZer/TaskManagement/commit/513d9381ccc99885e58c926d3fe2bb18ff241969))
+
+
+### 📦 Dependencies
+
+* add @radix-ui/react-avatar and date-fns packages ([3ce8c17](https://github.com/TheoEwzZer/TaskManagement/commit/3ce8c17299586bab0200e47b9db960ebb7c01efb))
+
 ## [1.13.0](https://github.com/TheoEwzZer/TaskManagement/compare/v1.12.0...v1.13.0) (2023-11-30)
 
 
