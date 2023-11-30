@@ -1,5 +1,26 @@
 # Changelog
 
+## [1.13.0](https://github.com/TheoEwzZer/TaskManagement/compare/v1.12.0...v1.13.0) (2023-11-30)
+
+
+### ✨ Features
+
+* add Actions component to CardModal ([27fccc5](https://github.com/TheoEwzZer/TaskManagement/commit/27fccc595ed6eb6b31a423728d01abaef72b670a))
+* add copy-card and delete-card actions ([fc3fd7a](https://github.com/TheoEwzZer/TaskManagement/commit/fc3fd7adcf3b31cbf9a0108e1360b30696c02c01))
+* add Description component to CardModal ([f2e7f99](https://github.com/TheoEwzZer/TaskManagement/commit/f2e7f995a1e5442cc6dc2f09ddc7c45584d2b823))
+
+
+### 💄 Styles
+
+* add new button variant and size options ([209f1a4](https://github.com/TheoEwzZer/TaskManagement/commit/209f1a41458b1774a604dc388e96c7bc7adcaf3f))
+* update dialog component styles ([6cd32ee](https://github.com/TheoEwzZer/TaskManagement/commit/6cd32ee4cc87b9ff2a26f5f7af14fa1bb799d45e))
+
+
+### 📦 Dependencies
+
+* bump @types/node from 20.10.0 to 20.10.1 ([079c98c](https://github.com/TheoEwzZer/TaskManagement/commit/079c98cd45f23c1068453bad33e12197482c834d))
+* bump framer-motion from 10.16.5 to 10.16.9 ([63c0dd5](https://github.com/TheoEwzZer/TaskManagement/commit/63c0dd513772b8784a8e20283140c0ffce9aacd8))
+
 ## [1.12.0](https://github.com/TheoEwzZer/TaskManagement/compare/v1.11.0...v1.12.0) (2023-11-29)
 
 
