@@ -11,6 +11,7 @@ import { Dialog, DialogContent } from "@/components/ui/dialog";
 
 import { Header } from "./header";
 import { Description } from "./description";
+import { Actions } from "./actions";
 
 export function CardModal(): ReactElement {
   const id: string | undefined = useCardModal(
@@ -39,6 +40,7 @@ export function CardModal(): ReactElement {
               {!cardData ? <Description.Skeleton /> : <Description data={cardData} />}
             </div>
           </div>
+          {!cardData ? <Actions.Skeleton /> : <Actions data={cardData} />}
         </div>
       </DialogContent>
     </Dialog>
