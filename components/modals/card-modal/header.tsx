@@ -27,6 +27,10 @@ export function Header({ data }: HeaderProps): ReactElement {
         queryKey: ["card", data.id],
       });
 
+      queryClient.invalidateQueries({
+        queryKey: ["card-logs", data.id],
+      });
+
       toast.success(`Renamed to "${data.title}"`);
       setTitle(data.title);
     },

@@ -54,6 +54,11 @@ export function Description({ data }: DescriptionProps): ReactElement {
       queryClient.invalidateQueries({
         queryKey: ["card", data.id],
       });
+
+      queryClient.invalidateQueries({
+        queryKey: ["card-logs", data.id],
+      });
+
       toast.success(`Card "${data.title}" updated`);
       disableEditing();
     },
@@ -91,7 +96,7 @@ export function Description({ data }: DescriptionProps): ReactElement {
             <FormTextarea
               id="description"
               className="w-full mt-2"
-              placeholder="Add a more detailed description..."
+              placeholder="Add a more detailed description"
               defaultValue={data.description || undefined}
               errors={fieldErrors}
               ref={textareaRef}
@@ -112,7 +117,7 @@ export function Description({ data }: DescriptionProps): ReactElement {
           <div
             onClick={enableEditing}
             role="button"
-            className="min-h-[78] bg-neutral-200 text-sm font-medium py-3 px-3.5 rounded-md"
+            className="min-h-[78px] bg-neutral-200 text-sm font-medium py-3 px-3.5 rounded-md"
           >
             {data.description || "Add a more detailed description..."}
           </div>

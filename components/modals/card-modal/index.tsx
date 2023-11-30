@@ -12,6 +12,8 @@ import { Dialog, DialogContent } from "@/components/ui/dialog";
 import { Header } from "./header";
 import { Description } from "./description";
 import { Actions } from "./actions";
+import { AuditLog } from "@prisma/client";
+import { Activity } from "./activity";
 
 export function CardModal(): ReactElement {
   const id: string | undefined = useCardModal(
@@ -27,6 +29,11 @@ export function CardModal(): ReactElement {
     queryFn: (): Promise<CardWithListTitle> => fetcher(`/api/cards/${id}`),
   });
 
+  const { data: auditLogsData } = useQuery<AuditLog[]>({
+    queryKey: ["card-logs", id],
+    queryFn: (): Promise<AuditLog[]> => fetcher(`/api/cards/${id}/logs`),
+  });
+
   return (
     <Dialog
       open={isOpen}
@@ -38,6 +45,11 @@ export function CardModal(): ReactElement {
           <div className="col-span-3">
             <div className="w-full space-y-6">
               {!cardData ? <Description.Skeleton /> : <Description data={cardData} />}
+              {!auditLogsData ? (
+                <Activity.Skeleton />
+              ) : (
+                <Activity items={auditLogsData} />
+              )}
             </div>
           </div>
           {!cardData ? <Actions.Skeleton /> : <Actions data={cardData} />}
