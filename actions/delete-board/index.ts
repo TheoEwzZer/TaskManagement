@@ -11,6 +11,7 @@ import { ActionState, createSafeAction } from "@/lib/create-safe-action";
 import { DeleteBoard } from "./schema";
 import { Board } from "@prisma/client";
 import { redirect } from "next/navigation";
+import { decreaseAvailableCount } from "@/lib/org-limit";
 
 async function handler(data: InputType): Promise<ReturnType> {
   const { userId, orgId } = auth();
@@ -32,6 +33,9 @@ async function handler(data: InputType): Promise<ReturnType> {
         orgId,
       },
     });
+
+    await decreaseAvailableCount();
+
     await createAuditLog({
       entityId: board.id,
       entityType: ENTITY_TYPE.BOARD,
