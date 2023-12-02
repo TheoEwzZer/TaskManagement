@@ -1,5 +1,38 @@
 # Changelog
 
+## [1.15.0](https://github.com/TheoEwzZer/TaskManagement/compare/v1.14.0...v1.15.0) (2023-12-02)
+
+
+### ✨ Features
+
+* add available board count to create new board button ([58d7adc](https://github.com/TheoEwzZer/TaskManagement/commit/58d7adc70f3c7496619c6258aa024755fb77458c))
+* add org limit checks and update available count ([53c7a8f](https://github.com/TheoEwzZer/TaskManagement/commit/53c7a8f0b6b0477ca32128d60c5b4c251f86a955))
+* add org limit functionality ([f32af24](https://github.com/TheoEwzZer/TaskManagement/commit/f32af242acdeb02fb7780886d35120421f738f3b))
+* add OrgLimit model to schema ([fe9c0b6](https://github.com/TheoEwzZer/TaskManagement/commit/fe9c0b6fad1a898d89ecdc9b68aead310b37dc9e))
+* add OrgSubscription model to schema ([7785f35](https://github.com/TheoEwzZer/TaskManagement/commit/7785f35d7bab803d1b62b79627a42f03fc4c3d96))
+* add ProModal component and use it in ModalProvider ([37bf64b](https://github.com/TheoEwzZer/TaskManagement/commit/37bf64b6353c63abfc442ced9c7219aced4fd673))
+* add subscription check and update UI components ([4eed792](https://github.com/TheoEwzZer/TaskManagement/commit/4eed792dc7af166c18798dd676b4723306b6c682))
+* add subscription check to create and delete board ([4a734dc](https://github.com/TheoEwzZer/TaskManagement/commit/4a734dc06cae1369ecdc17865f55f520a6aab1bd))
+* add subscription check to create-board and board-list components ([3237fcd](https://github.com/TheoEwzZer/TaskManagement/commit/3237fcd1947f0be122f1ad858170d1b8cd5524af))
+* add useProModal hook for managing modal state ([a5e7c9c](https://github.com/TheoEwzZer/TaskManagement/commit/a5e7c9c7fc52f6ac4816e16a43968503c92e07bd))
+* add webhook route for handling Stripe events ([0da550c](https://github.com/TheoEwzZer/TaskManagement/commit/0da550caa68a068252db0995380c64a72c537202))
+
+
+### 🔒️ Security
+
+* update publicRoutes in authMiddleware ([77f1829](https://github.com/TheoEwzZer/TaskManagement/commit/77f18290a4bb71f712e281cab18549e629eeaed4))
+
+
+### 🔧 Other
+
+* add constant for maximum number of free boards ([3763759](https://github.com/TheoEwzZer/TaskManagement/commit/3763759761883da6528588fd81f33ce771a2a6be))
+
+
+### 📦 Dependencies
+
+* add stripe package dependency ([acf3a48](https://github.com/TheoEwzZer/TaskManagement/commit/acf3a48c65c33466067012e31c7c89590ecb67fe))
+* bump framer-motion from 10.16.9 to 10.16.10 ([3f46422](https://github.com/TheoEwzZer/TaskManagement/commit/3f46422bd4b66b2d48ba96bd8055add8027ce961))
+
 ## [1.14.0](https://github.com/TheoEwzZer/TaskManagement/compare/v1.13.0...v1.14.0) (2023-11-30)
 
 
