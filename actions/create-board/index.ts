@@ -11,6 +11,7 @@ import { ActionState, createSafeAction } from "@/lib/create-safe-action";
 import { CreateBoard } from "./schema";
 import { Board } from "@prisma/client";
 import { hasAvailableCount, incrementAvailableCount } from "@/lib/org-limit";
+import { checkSubscription } from "@/lib/subscription";
 
 async function handler(data: InputType): Promise<ReturnType> {
   const { userId, orgId } = auth();
@@ -22,8 +23,9 @@ async function handler(data: InputType): Promise<ReturnType> {
   }
 
   const canCreate: boolean = await hasAvailableCount();
+  const isPro: boolean = await checkSubscription();
 
-  if (!canCreate) {
+  if (!canCreate && !isPro) {
     return {
       error: "You have reached your limit of free boards. Please upgrade to create more.",
     };
@@ -55,7 +57,9 @@ async function handler(data: InputType): Promise<ReturnType> {
       },
     });
 
-    await incrementAvailableCount();
+    if (!isPro) {
+      await incrementAvailableCount();
+    }
 
     await createAuditLog({
       entityId: board.id,
