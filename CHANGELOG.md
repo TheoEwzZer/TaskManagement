@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.15.1](https://github.com/TheoEwzZer/TaskManagement/compare/v1.15.0...v1.15.1) (2023-12-02)
+
+
+### 🐛 Bug Fixes
+
+* add postinstall script to generate Prisma client ([2c63682](https://github.com/TheoEwzZer/TaskManagement/commit/2c63682c24b749a3e70643a23d3a773c69f5a2a1))
+
 ## [1.15.0](https://github.com/TheoEwzZer/TaskManagement/compare/v1.14.0...v1.15.0) (2023-12-02)
 
 
