@@ -13,7 +13,7 @@ type WithClerkUrl<T> = T & {
 };
 
 export default authMiddleware({
-  publicRoutes: ["/"],
+  publicRoutes: ["/", "/api/webhook"],
   afterAuth(auth: Auth, req: WithClerkUrl<NextRequest>): any {
     if (auth.userId && auth.isPublicRoute) {
       let path: string = "select-org";
