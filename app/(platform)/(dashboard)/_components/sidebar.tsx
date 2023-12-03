@@ -6,6 +6,7 @@ import Link from "next/link";
 import { Plus } from "lucide-react";
 import { useLocalStorage } from "usehooks-ts";
 import { useOrganization, useOrganizationList } from "@clerk/nextjs";
+import type { OrganizationMembershipResource } from "@clerk/types";
 
 import { Button } from "@/components/ui/button";
 import { Skeleton } from "@/components/ui/skeleton";
@@ -28,7 +29,7 @@ export function Sidebar({ storageKey = "t-sidebar-state" }: SidebarProps): React
   });
 
   const defaultAccordionValue: string[] = Object.keys(expanded).reduce(
-    (acc: string[], key: string) => {
+    (acc: string[], key: string): string[] => {
       if (expanded[key]) {
         acc.push(key);
       }
@@ -38,8 +39,8 @@ export function Sidebar({ storageKey = "t-sidebar-state" }: SidebarProps): React
     []
   );
 
-  const onExpand = (id: string) => {
-    setExpanded((curr) => ({
+  const onExpand: (id: string) => void = (id: string): void => {
+    setExpanded((curr: Record<string, any>): { [x: string]: any } => ({
       ...curr,
       [id]: !expanded[id],
     }));
@@ -82,15 +83,17 @@ export function Sidebar({ storageKey = "t-sidebar-state" }: SidebarProps): React
         defaultValue={defaultAccordionValue}
         className="space-y-2"
       >
-        {userMemberships.data.map(({ organization }) => (
-          <NavItem
-            key={organization.id}
-            isActive={activeOrganization?.id === organization.id}
-            isExpanded={expanded[organization.id]}
-            organization={organization as Organization}
-            onExpand={onExpand}
-          />
-        ))}
+        {userMemberships.data.map(
+          ({ organization }: OrganizationMembershipResource): ReactElement => (
+            <NavItem
+              key={organization.id}
+              isActive={activeOrganization?.id === organization.id}
+              isExpanded={expanded[organization.id]}
+              organization={organization as Organization}
+              onExpand={onExpand}
+            />
+          )
+        )}
       </Accordion>
     </>
   );
