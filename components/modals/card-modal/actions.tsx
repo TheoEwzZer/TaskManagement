@@ -13,6 +13,7 @@ import { toast } from "sonner";
 import { Card } from "@prisma/client";
 import { copyCard } from "@/actions/copy-card";
 import { deleteCard } from "@/actions/delete-card";
+import { CardMember } from "@/app/(platform)/(dashboard)/board/[boardId]/_components/card-member";
 
 interface ActionProps {
   data: CardWithListTitle;
@@ -66,6 +67,7 @@ export function Actions({ data }: ActionProps): ReactElement {
   return (
     <div className="space-y-2 mt-2">
       <p className="text-xs font-semibold">Actions</p>
+      <CardMember data={data} />
       <Button
         onClick={onCopy}
         disabled={isLoadingCopy}
@@ -90,7 +92,7 @@ export function Actions({ data }: ActionProps): ReactElement {
   );
 }
 
-Actions.Skeleton = function ActionsSkeleton() {
+Actions.Skeleton = function ActionsSkeleton(): ReactElement {
   return (
     <div className="space-y-2 mt-2">
       <Skeleton className="w-20 h-4 bg-neutral-200" />

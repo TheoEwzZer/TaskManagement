@@ -57,16 +57,22 @@ async function handler(data: InputType): Promise<ReturnType> {
 
 export const updateCard: (data: {
   boardId: string;
-  id: string;
   description?: string | undefined;
+  id: string;
   title?: string | undefined;
+  userId?: string | null | undefined;
+  userImage?: string | null | undefined;
+  userName?: string | null | undefined;
 }) => Promise<
   ActionState<
     {
       boardId: string;
-      id: string;
       description?: string | undefined;
+      id: string;
       title?: string | undefined;
+      userId?: string | null | undefined;
+      userImage?: string | null | undefined;
+      userName?: string | null | undefined;
     },
     Card
   >

@@ -46,6 +46,10 @@ model Card {
   order       Int
   description String? @db.Text
 
+  userId    String?
+  userImage String? @db.Text
+  userName  String? @db.Text
+
   listId String
   list   List   @relation(fields: [listId], references: [id], onDelete: Cascade)
 
