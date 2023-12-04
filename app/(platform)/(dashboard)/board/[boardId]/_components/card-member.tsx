@@ -53,7 +53,6 @@ export function CardMember({ data }: ActionProps): ReactElement {
               membership.publicUserData
           );
         setMembers(members);
-        console.log(members);
       }
     };
 
