@@ -57,7 +57,8 @@ export function CardMember({ data }: ActionProps): ReactElement {
     };
 
     fetchMembers();
-  }, [activeOrganization]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   const { execute } = useAction(updateCard, {
     onSuccess: (data: Card): void => {
@@ -107,7 +108,7 @@ export function CardMember({ data }: ActionProps): ReactElement {
   };
 
   return (
-    <Popover>
+    <Popover onOpenChange={(): void => setValue(data.userId || "")}>
       <PopoverTrigger asChild>
         <Button
           variant="gray"
