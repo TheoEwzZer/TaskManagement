@@ -83,8 +83,7 @@ function Testimonials(): ReactElement {
           <ChevronLeft className="h-10 w-10" />
         </Button>
         <motion.div
-          className="testimonial-container shadow-xl rounded-xl p-8 bg-gray-200 font-bold overflow-hidden relative"
-          style={{ width: "900px", height: "150px" }}
+          className={`testimonial-container shadow-xl rounded-xl p-8 bg-gray-200 font-bold relative ${"sm:w-full md:w-3/4 lg:w-2/3 xl:w-1/2"} ${"overflow-hidden sm:max-h-96 md:max-h-80 lg:max-h-64 xl:max-h-56"}`}
         >
           <Testimonial
             testimonial={testimonies[currentIndex]}
