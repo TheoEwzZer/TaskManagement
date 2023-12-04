@@ -33,7 +33,7 @@ export async function createAuditLog({
         action,
         userId: user.id,
         userImage: user.imageUrl,
-        userName: user.firstName + " " + user.lastName,
+        userName: (user.firstName ? user.firstName + " " : "") + (user.lastName || ""),
       },
     });
   } catch (error) {

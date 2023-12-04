@@ -97,7 +97,9 @@ export function CardMember({ data }: ActionProps): ReactElement {
           boardId,
           userId: publicUserData.userId,
           userImage: publicUserData.imageUrl,
-          userName: publicUserData.firstName + " " + publicUserData.lastName,
+          userName:
+            (publicUserData.firstName ? publicUserData.firstName + " " : "") +
+            (publicUserData.lastName || ""),
         });
       }
     }
