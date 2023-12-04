@@ -1,5 +1,57 @@
 # Changelog
 
+## [2.0.0](https://github.com/TheoEwzZer/TaskManagement/compare/v1.15.1...v2.0.0) (2023-12-04)
+
+
+### ⚠ BREAKING CHANGES
+
+* add possibility to assign card to a member
+
+### ✨ Features
+
+* add Command component for UI ([034ecbf](https://github.com/TheoEwzZer/TaskManagement/commit/034ecbfcc221db5ae1874f651d6eac06ffe53716))
+* add member component to CardModal ([79970b2](https://github.com/TheoEwzZer/TaskManagement/commit/79970b2f37a998972f8e40b6bf7ccbe9f15247bd))
+* add possibility to assign card to a member ([3315fce](https://github.com/TheoEwzZer/TaskManagement/commit/3315fcece176b03c2d14fc3966b56c9ef51a60b8))
+
+
+### 🔥 Changes
+
+* remove console.log statement in CardMember component ([3371c81](https://github.com/TheoEwzZer/TaskManagement/commit/3371c81ae22f4aa38c7a4b643962a2112c28ee8a))
+
+
+### 🐛 Bug Fixes
+
+* add nullable fields for userId, userImage, and userName in schema.ts ([6cf6179](https://github.com/TheoEwzZer/TaskManagement/commit/6cf61799aad2a6342eed241aa3e0cf4f7da0aaa0))
+* fix useEffect dependency in CardMember component ([5650586](https://github.com/TheoEwzZer/TaskManagement/commit/5650586783fdc7ce035decfaf0c8eb554ab364b5))
+* refactor user name concatenation in card-member and create-audit-log ([10215b3](https://github.com/TheoEwzZer/TaskManagement/commit/10215b3e66f593a7c51fd7102043befe98fcee63))
+
+
+### ♻️ Code Refactoring
+
+* refactor sidebar component and update imports ([5113ca1](https://github.com/TheoEwzZer/TaskManagement/commit/5113ca1b313a045092e24fa0cf9dba8231e88e4f))
+
+
+### 💄 Styles
+
+* increase height of description container ([190a0fa](https://github.com/TheoEwzZer/TaskManagement/commit/190a0fa6b6fdd219f06a3c5f839262786c6ce06a))
+
+
+### 📦 Dependencies
+
+* add cmdk dependency ([291b7c4](https://github.com/TheoEwzZer/TaskManagement/commit/291b7c484cf3849c6048c7bdf014beb148cba9da))
+* bump @tanstack/react-query from 5.10.0 to 5.12.2 ([d1e0a97](https://github.com/TheoEwzZer/TaskManagement/commit/d1e0a97b3fc8c90167c7d17ea914147c44bfc140))
+* bump @types/node from 20.10.1 to 20.10.3 ([76e8289](https://github.com/TheoEwzZer/TaskManagement/commit/76e8289983caa761310a80ff24870f4e00822107))
+* bump @types/react from 18.2.39 to 18.2.41 ([16fc1a8](https://github.com/TheoEwzZer/TaskManagement/commit/16fc1a882298e7ae9084e4eb0ac8a4c00f8c38d9))
+* bump eslint from 8.54.0 to 8.55.0 ([850cfc4](https://github.com/TheoEwzZer/TaskManagement/commit/850cfc44aa3ea63b289fc43044cf071594fc61ac))
+* bump framer-motion from 10.16.10 to 10.16.12 ([2aaa5c4](https://github.com/TheoEwzZer/TaskManagement/commit/2aaa5c42c8cd33659ae72e2f0477fc2e8e1fce75))
+* bump postcss from 8.4.31 to 8.4.32 ([666cdca](https://github.com/TheoEwzZer/TaskManagement/commit/666cdcacd07665a736c2670ee08bd6528ec17697))
+* bump tailwind-merge from 2.0.0 to 2.1.0 ([084c0ff](https://github.com/TheoEwzZer/TaskManagement/commit/084c0ff5cc8dcd9fce4226fa91734038f40544ad))
+
+
+### 📝 Documentation
+
+* update README.md ([51727b3](https://github.com/TheoEwzZer/TaskManagement/commit/51727b37e8669caa6ee6a003242aa88230fc44b6))
+
 ## [1.15.1](https://github.com/TheoEwzZer/TaskManagement/compare/v1.15.0...v1.15.1) (2023-12-02)
 
 
