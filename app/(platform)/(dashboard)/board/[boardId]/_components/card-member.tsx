@@ -2,6 +2,8 @@
 
 import { ReactElement, useEffect, useState } from "react";
 
+import { updateCard } from "@/actions/update-card";
+import { Avatar, AvatarImage } from "@/components/ui/avatar";
 import { Button } from "@/components/ui/button";
 import {
   Command,
@@ -16,16 +18,15 @@ import {
   PopoverContent,
   PopoverTrigger,
 } from "@/components/ui/popover";
+import { useAction } from "@/hooks/use-action";
 import { cn } from "@/lib/utils";
+import { CardWithListTitle } from "@/types";
 import { useOrganization } from "@clerk/nextjs";
 import type { OrganizationMembershipResource, PublicUserData } from "@clerk/types";
-import { Check, UserRoundPlus, X } from "lucide-react";
-import { CardWithListTitle } from "@/types";
-import { useParams } from "next/navigation";
-import { useAction } from "@/hooks/use-action";
-import { updateCard } from "@/actions/update-card";
 import { Card } from "@prisma/client";
 import { useQueryClient } from "@tanstack/react-query";
+import { Check, UserRoundPlus, X } from "lucide-react";
+import { useParams } from "next/navigation";
 import { toast } from "sonner";
 
 interface ActionProps {
@@ -146,14 +147,22 @@ export function CardMember({ data }: ActionProps): ReactElement {
                   value={member.userId}
                   onSelect={(): void => onAdd(member)}
                 >
+                  {member && member.imageUrl && (
+                    <Avatar className="h-6 w-6 mr-2">
+                      <AvatarImage
+                        src={member.imageUrl}
+                        alt={member.firstName + " " + member.lastName}
+                      />
+                    </Avatar>
+                  )}
+                  {member.firstName && member.firstName + " "}
+                  {member.lastName && member.lastName}
                   <Check
                     className={cn(
-                      "mr-2 h-4 w-4",
+                      "ml-2 h-4 w-4",
                       value === member.userId ? "opacity-100" : "opacity-0"
                     )}
                   />
-                  {member.firstName && member.firstName + " "}
-                  {member.lastName && member.lastName}
                 </CommandItem>
               )
             )}
