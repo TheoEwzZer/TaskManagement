@@ -65,29 +65,34 @@ export function Actions({ data }: ActionProps): ReactElement {
   };
 
   return (
-    <div className="space-y-2 mt-2">
-      <p className="text-xs font-semibold">Actions</p>
-      <CardMember data={data} />
-      <Button
-        onClick={onCopy}
-        disabled={isLoadingCopy}
-        variant="gray"
-        className="w-full justify-start"
-        size="inline"
-      >
-        <Copy className="h-4 w-4 mr-2" />
-        Copy
-      </Button>
-      <Button
-        onClick={onDelete}
-        disabled={isLoadingDelete}
-        variant="gray"
-        className="w-full justify-start"
-        size="inline"
-      >
-        <Trash className="h-4 w-4 mr-2" />
-        Delete
-      </Button>
+    <div className="space-y-4 mt-2">
+      <div className="space-y-2 mt-2">
+        <p className="text-xs font-semibold">Add to card</p>
+        <CardMember data={data} />
+      </div>
+      <div className="space-y-2">
+        <p className="text-xs font-semibold">Actions</p>
+        <Button
+          onClick={onCopy}
+          disabled={isLoadingCopy}
+          variant="gray"
+          className="w-full justify-start"
+          size="inline"
+        >
+          <Copy className="h-4 w-4 mr-2" />
+          Copy
+        </Button>
+        <Button
+          onClick={onDelete}
+          disabled={isLoadingDelete}
+          variant="gray"
+          className="w-full justify-start"
+          size="inline"
+        >
+          <Trash className="h-4 w-4 mr-2" />
+          Delete
+        </Button>
+      </div>
     </div>
   );
 }
