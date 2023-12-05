@@ -1,4 +1,4 @@
-import { ReactElement, Suspense } from "react";
+import { ReactElement } from "react";
 
 import { Separator } from "@/components/ui/separator";
 
@@ -13,9 +13,7 @@ async function ActivityPage(): Promise<ReactElement> {
     <div className="w-full">
       <Info isPro={isPro} />
       <Separator className="my-4" />
-      <Suspense fallback={<ActivityList.Skeleton />}>
-        <ActivityList />
-      </Suspense>
+      <ActivityList />
     </div>
   );
 }

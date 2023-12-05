@@ -24,7 +24,7 @@ export async function GET(
       orderBy: {
         createdAt: "desc",
       },
-      take: 3,
+      take: 10,
     });
 
     return NextResponse.json(auditLogs);
