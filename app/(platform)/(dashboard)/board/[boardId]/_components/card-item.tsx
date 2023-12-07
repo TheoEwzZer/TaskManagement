@@ -59,13 +59,13 @@ export function CardItem({ data, index }: CardItemProps): ReactElement {
                         })}
                       </Badge>
                     ) : (
-                      <Badge variant="transparent">
-                        <Clock className="h-4 w-4 mr-1" />
+                      <div className="flex">
+                        <Clock className="h-4 w-4 mr-1 mt-0.5" />
                         {new Date(data.dueDate).toLocaleDateString("en-US", {
                           month: "short",
                           day: "numeric",
                         })}
-                      </Badge>
+                      </div>
                     )}
                   </>
                 )}
