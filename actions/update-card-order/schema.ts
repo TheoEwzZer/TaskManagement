@@ -16,6 +16,8 @@ export const UpdateCardOrder: z.ZodObject<
           userId: z.ZodNullable<z.ZodString>;
           userImage: z.ZodNullable<z.ZodString>;
           userName: z.ZodNullable<z.ZodString>;
+          dueDate: z.ZodNullable<z.ZodDate>;
+          isComplete: z.ZodNullable<z.ZodBoolean>;
         },
         "strip",
         z.ZodTypeAny,
@@ -30,6 +32,8 @@ export const UpdateCardOrder: z.ZodObject<
           userId: string | null;
           userImage: string | null;
           userName: string | null;
+          dueDate: Date | null;
+          isComplete: boolean | null;
         },
         {
           id: string;
@@ -42,6 +46,8 @@ export const UpdateCardOrder: z.ZodObject<
           userId: string | null;
           userImage: string | null;
           userName: string | null;
+          dueDate: Date | null;
+          isComplete: boolean | null;
         }
       >,
       "many"
@@ -65,6 +71,8 @@ export const UpdateCardOrder: z.ZodObject<
       userId: z.string().nullable(),
       userImage: z.string().nullable(),
       userName: z.string().nullable(),
+      dueDate: z.date().nullable(),
+      isComplete: z.boolean().nullable(),
     })
   ),
   boardId: z.string(),
