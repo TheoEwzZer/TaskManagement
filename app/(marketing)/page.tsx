@@ -5,7 +5,8 @@ import localFont from "next/font/local";
 import { NextFont } from "next/dist/compiled/@next/font";
 import { Poppins } from "next/font/google";
 import { Medal } from "lucide-react";
-
+import Features from "./_components/features";
+import Testimonials from "./_components/testimonials";
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
 
@@ -21,7 +22,7 @@ const textFont: NextFont = Poppins({
 function MarketingPage(): ReactElement {
   return (
     <>
-      <div className="flex flex-col items-center justify-center py-12 px-4 md:px-10 lg:px-20 text-gray-800 pb-20">
+      <div className="flex flex-col items-center justify-center py-12 px-4 md:px-10 lg:px-20 text-gray-800 pb-40 pt-40 bg-gradient-to-br from-pink-600 to-yellow-400">
         <div
           className={cn(
             "flex flex-col items-center justify-center space-y-6 text-center",
@@ -61,6 +62,8 @@ function MarketingPage(): ReactElement {
           <Link href="/sign-up">Get TaskManagement for Free</Link>
         </Button>
       </div>
+      <Features />
+      <Testimonials />
     </>
   );
 }

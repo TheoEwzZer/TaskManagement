@@ -25,7 +25,7 @@ function Navbar(): ReactElement {
           <Button
             variant="primary"
             size="sm"
-            className="rounded-sm hidden md:block h-auto py-1.5 px-2"
+            className="rounded-sm hidden md:block h-auto py-1.5 px-2 bg-orange-600"
           >
             Create
           </Button>

@@ -2,6 +2,7 @@ import { ReactElement } from "react";
 
 import { Logo } from "@/components/logo";
 import { Button } from "@/components/ui/button";
+import Link from "next/link";
 
 function Footer(): ReactElement {
   return (
@@ -13,7 +14,7 @@ function Footer(): ReactElement {
             size="sm"
             className="text-white bg-black hover:"
           >
-            Privacy Policy
+            <Link href="/privacy">Privacy Policy</Link>
           </Button>
           <Button
             size="sm"
