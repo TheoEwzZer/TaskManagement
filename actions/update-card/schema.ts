@@ -9,6 +9,8 @@ export const UpdateCard: z.ZodObject<
     userId: z.ZodOptional<z.ZodNullable<z.ZodString>>;
     userImage: z.ZodOptional<z.ZodNullable<z.ZodString>>;
     userName: z.ZodOptional<z.ZodNullable<z.ZodString>>;
+    dueDate: z.ZodOptional<z.ZodNullable<z.ZodString>>;
+    isComplete: z.ZodOptional<z.ZodNullable<z.ZodBoolean>>;
   },
   "strip",
   z.ZodTypeAny,
@@ -20,6 +22,8 @@ export const UpdateCard: z.ZodObject<
     userId?: string | null | undefined;
     userImage?: string | null | undefined;
     userName?: string | null | undefined;
+    dueDate?: string | null | undefined;
+    isComplete?: boolean | null | undefined;
   },
   {
     boardId: string;
@@ -29,6 +33,8 @@ export const UpdateCard: z.ZodObject<
     userId?: string | null | undefined;
     userImage?: string | null | undefined;
     userName?: string | null | undefined;
+    dueDate?: string | null | undefined;
+    isComplete?: boolean | null | undefined;
   }
 > = z.object({
   boardId: z.string(),
@@ -56,4 +62,6 @@ export const UpdateCard: z.ZodObject<
   userId: z.string().nullable().optional(),
   userImage: z.string().nullable().optional(),
   userName: z.string().nullable().optional(),
+  dueDate: z.string().nullable().optional(),
+  isComplete: z.boolean().nullable().optional(),
 });

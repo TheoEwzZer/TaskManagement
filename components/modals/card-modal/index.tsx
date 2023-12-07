@@ -15,6 +15,7 @@ import { Actions } from "./actions";
 import { AuditLog } from "@prisma/client";
 import { Activity } from "./activity";
 import { Member } from "./member";
+import { DueDate } from "./due-time";
 
 export function CardModal(): ReactElement {
   const id: string | undefined = useCardModal(
@@ -45,7 +46,10 @@ export function CardModal(): ReactElement {
         <div className="grid grid-cols-1 md:grid-cols-4 md:gap-4">
           <div className="col-span-3">
             <div className="w-full space-y-6">
-              {cardData && cardData.userName && <Member data={cardData} />}
+              <div className="flex items-start gap-x-3 w-full ml-8">
+                {cardData && cardData.userName && <Member data={cardData} />}
+                {cardData && cardData.dueDate && <DueDate data={cardData} />}
+              </div>
               {!cardData ? <Description.Skeleton /> : <Description data={cardData} />}
               {!auditLogsData ? (
                 <Activity.Skeleton />

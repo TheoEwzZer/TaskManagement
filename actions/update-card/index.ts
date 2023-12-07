@@ -63,6 +63,8 @@ export const updateCard: (data: {
   userId?: string | null | undefined;
   userImage?: string | null | undefined;
   userName?: string | null | undefined;
+  dueDate?: string | null | undefined;
+  isComplete?: boolean | null | undefined;
 }) => Promise<
   ActionState<
     {
@@ -73,6 +75,8 @@ export const updateCard: (data: {
       userId?: string | null | undefined;
       userImage?: string | null | undefined;
       userName?: string | null | undefined;
+      dueDate?: string | null | undefined;
+      isComplete?: boolean | null | undefined;
     },
     Card
   >

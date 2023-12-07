@@ -13,7 +13,8 @@ import { toast } from "sonner";
 import { Card } from "@prisma/client";
 import { copyCard } from "@/actions/copy-card";
 import { deleteCard } from "@/actions/delete-card";
-import { CardMember } from "@/app/(platform)/(dashboard)/board/[boardId]/_components/card-member";
+import { CardMember } from "@/components/modals/card-modal/card-member";
+import { CardDueDate } from "@/components/modals/card-modal/card-due-date";
 
 interface ActionProps {
   data: CardWithListTitle;
@@ -69,6 +70,7 @@ export function Actions({ data }: ActionProps): ReactElement {
       <div className="space-y-2 mt-2">
         <p className="text-xs font-semibold">Add to card</p>
         <CardMember data={data} />
+        <CardDueDate data={data} />
       </div>
       <div className="space-y-2">
         <p className="text-xs font-semibold">Actions</p>
