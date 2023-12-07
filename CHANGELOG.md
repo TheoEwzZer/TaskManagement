@@ -1,5 +1,17 @@
 # Changelog
 
+## [2.1.1](https://github.com/TheoEwzZer/TaskManagement/compare/v2.1.0...v2.1.1) (2023-12-07)
+
+
+### 🐛 Bug Fixes
+
+* fix bug when drag & drop card ([9bc1f9a](https://github.com/TheoEwzZer/TaskManagement/commit/9bc1f9a7c50fe34dd6ee16f7f94b83d7156977e9))
+
+
+### 💄 Styles
+
+* do not display badge if date is not overdue, not due soon and not complete ([b9764c1](https://github.com/TheoEwzZer/TaskManagement/commit/b9764c1ae80f23b60547fc6837136b713aa427a1))
+
 ## [2.1.0](https://github.com/TheoEwzZer/TaskManagement/compare/v2.0.0...v2.1.0) (2023-12-07)
 
 
