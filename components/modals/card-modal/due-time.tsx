@@ -75,8 +75,8 @@ export function DueDate({ data }: DueDateProps): ReactElement | null {
       execute({
         id: data.id,
         boardId,
-        dueDate: undefined,
-        isComplete: undefined,
+        dueDate: null,
+        isComplete: null,
       });
     }
   };
@@ -110,8 +110,8 @@ export function DueDate({ data }: DueDateProps): ReactElement | null {
       execute({
         id: data.id,
         boardId,
-        dueDate: undefined,
-        isComplete: undefined,
+        dueDate: null,
+        isComplete: null,
       });
     }
     if (!isChecked) {

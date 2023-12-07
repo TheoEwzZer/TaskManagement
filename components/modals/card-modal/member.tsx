@@ -53,9 +53,9 @@ export function Member({ data }: MemberProps): ReactElement | null {
       execute({
         id: data.id,
         boardId,
-        userId: undefined,
-        userImage: undefined,
-        userName: undefined,
+        userId: null,
+        userImage: null,
+        userName: null,
       });
     }
   };
