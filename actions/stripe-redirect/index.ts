@@ -60,7 +60,7 @@ async function handler(_data: InputType): Promise<ReturnType> {
                   name: "TaskManagement Pro",
                   description: "Unlimited boards for your organization",
                 },
-                unit_amount: 2000,
+                unit_amount: 999,
                 recurring: {
                   interval: "month",
                 },
