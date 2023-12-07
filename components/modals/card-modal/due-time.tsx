@@ -28,7 +28,7 @@ export function DueDate({ data }: DueDateProps): ReactElement | null {
   const [isChecked, setIsChecked] = useState<boolean>(data.isComplete || false);
   const [hoverDescription, setHoverDescription] = useState<string>("");
   const [badgeDescription, setBadgeDescription] = useState<string>("");
-  const [badgeVariant, setBadgeVariant] = useState<"default" | "destructive">("default");
+  const [badgeVariant, setBadgeVariant] = useState<"success" | "destructive">("success");
 
   const [date, setDate] = useState<Date | undefined>(
     data.dueDate ? new Date(data.dueDate) : undefined
@@ -117,7 +117,7 @@ export function DueDate({ data }: DueDateProps): ReactElement | null {
     if (!isChecked) {
       setHoverDescription("This card is complete.");
       setBadgeDescription("Complete");
-      setBadgeVariant("default");
+      setBadgeVariant("success");
     } else {
       if (date && isPast(date)) {
         setHoverDescription("This card is past due.");
@@ -146,7 +146,7 @@ export function DueDate({ data }: DueDateProps): ReactElement | null {
     if (isChecked) {
       setHoverDescription("This card is complete.");
       setBadgeDescription("Complete");
-      setBadgeVariant("default");
+      setBadgeVariant("success");
     } else {
       if (date && isPast(date)) {
         setHoverDescription("This card is past due.");
