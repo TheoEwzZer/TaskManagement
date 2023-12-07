@@ -1,5 +1,57 @@
 # Changelog
 
+## [2.1.0](https://github.com/TheoEwzZer/TaskManagement/compare/v2.0.0...v2.1.0) (2023-12-07)
+
+
+### ✨ Features
+
+* add Avatar component to CardItem ([a76e27b](https://github.com/TheoEwzZer/TaskManagement/commit/a76e27bc26dece5bace2252e239cb69380b6c372))
+* add Avatar component to CardMember ([93b0e9f](https://github.com/TheoEwzZer/TaskManagement/commit/93b0e9fe93e4e4fed35f1b001d815b538f31d50c))
+* add due time in card ([f6c9cae](https://github.com/TheoEwzZer/TaskManagement/commit/f6c9cae4120db6d7d991f367cf5110ae3c47b090))
+* add due time in card item ([b3142dc](https://github.com/TheoEwzZer/TaskManagement/commit/b3142dcdf79e1a8bddcb49172ed80b262beab863))
+* Add new page for privacy policy ([8486f20](https://github.com/TheoEwzZer/TaskManagement/commit/8486f2068c2466087461bb51f6e2f39d2527c37c))
+* add pagination for activity log ([b2e6f00](https://github.com/TheoEwzZer/TaskManagement/commit/b2e6f00c0d12d20d639c795076f844eae9bf7044))
+* change price value of pro subscription ([4d5426c](https://github.com/TheoEwzZer/TaskManagement/commit/4d5426c600a5e9a97d17b74e99b2650772fbeb5e))
+* turn testimonials into responsive carrousel ([4d16391](https://github.com/TheoEwzZer/TaskManagement/commit/4d16391de31789071e73a5d8973f819df611f044))
+
+
+### 🐛 Bug Fixes
+
+* add dueDate and isComplete fields to ([1266c97](https://github.com/TheoEwzZer/TaskManagement/commit/1266c97d920064549f21b1100df29f85427f7f25))
+* fix null values in dueDate and isComplete properties ([1c0197c](https://github.com/TheoEwzZer/TaskManagement/commit/1c0197c2db424cc425f28689590f0b567f4dd056))
+
+
+### 💄 Styles
+
+* add css for home page and board page ([9999734](https://github.com/TheoEwzZer/TaskManagement/commit/99997349d0f508bf3a19b87fc9fb559441f9e182))
+* add member into `Add to card` category ([30f5f0d](https://github.com/TheoEwzZer/TaskManagement/commit/30f5f0d64a5fcd7ea2a7582ab9e3640de797581a))
+* update board-list grid layout ([12cbeb3](https://github.com/TheoEwzZer/TaskManagement/commit/12cbeb364eb2ed7445472e8460cecf7667bd5938))
+* update card modal description height ([a703498](https://github.com/TheoEwzZer/TaskManagement/commit/a703498c92e0ed56e2da328979bceecdef1c64c1))
+* update card-item component styling ([7aa063b](https://github.com/TheoEwzZer/TaskManagement/commit/7aa063beae721ec715c25af1d19cfdac8ea4e10f))
+* update card-modal description styling ([ce7dacd](https://github.com/TheoEwzZer/TaskManagement/commit/ce7dacd6e753310cefae757f99926ecb79deea6d))
+* update card-modal layout ([d7f1b1b](https://github.com/TheoEwzZer/TaskManagement/commit/d7f1b1b13d216e854b31674cfe83037c41d989a0))
+* update max-width of tooltip content ([138cba1](https://github.com/TheoEwzZer/TaskManagement/commit/138cba180e0299397a2a811f4733dc7fd743d5dd))
+
+
+### 📦 Dependencies
+
+* add @hookform/resolvers and ([3b73378](https://github.com/TheoEwzZer/TaskManagement/commit/3b73378f33ccfdcc97620aa9f03516f9dbd766ad))
+* bump @clerk/nextjs from 4.27.2 to 4.27.3 ([69509a4](https://github.com/TheoEwzZer/TaskManagement/commit/69509a423c59938cd68a43b3bcbe41b751b59994))
+* bump @clerk/nextjs from 4.27.3 to 4.27.4 ([cef8801](https://github.com/TheoEwzZer/TaskManagement/commit/cef8801668f8f076c475573358a0a47d647add0d))
+* bump @hello-pangea/dnd from 16.3.0 to 16.5.0 ([e84ffb7](https://github.com/TheoEwzZer/TaskManagement/commit/e84ffb7ae73b813603170c7094c0ab0e4443778c))
+* bump @prisma/client from 5.6.0 to 5.7.0 ([19cd856](https://github.com/TheoEwzZer/TaskManagement/commit/19cd856e3c2d2229fb4a2c5124a3bc3562025ae7))
+* bump @types/node from 20.10.3 to 20.10.4 ([188ca70](https://github.com/TheoEwzZer/TaskManagement/commit/188ca7081c5519815e1173d31b0fce9b3959e7b4))
+* bump @types/react from 18.2.41 to 18.2.42 ([4a8ffb8](https://github.com/TheoEwzZer/TaskManagement/commit/4a8ffb804a6e00f1049a468627c06b4361f57960))
+* bump framer-motion from 10.16.12 to 10.16.14 ([df91428](https://github.com/TheoEwzZer/TaskManagement/commit/df9142888f9ed20db2c7e4e8826f2a5d99a92361))
+* bump framer-motion from 10.16.14 to 10.16.15 ([179abd0](https://github.com/TheoEwzZer/TaskManagement/commit/179abd00cd986a6cc2456ab4ca0ccd5c04bd3a7d))
+* bump prisma from 5.6.0 to 5.7.0 ([6730c3f](https://github.com/TheoEwzZer/TaskManagement/commit/6730c3fc40e9b2e9a84731a5f5c849cac5f817c4))
+* bump tailwindcss from 3.3.5 to 3.3.6 ([65a2a69](https://github.com/TheoEwzZer/TaskManagement/commit/65a2a69cb57b36f8113cd18394eda278809886bd))
+
+
+### 🔀 Merge
+
+* merge branch 'main' of https://github.com/TheoEwzZer/TaskManagement ([0bf320d](https://github.com/TheoEwzZer/TaskManagement/commit/0bf320dfc1c31eac958c6cbee55ca76ec9ad93eb))
+
 ## [2.0.0](https://github.com/TheoEwzZer/TaskManagement/compare/v1.15.1...v2.0.0) (2023-12-04)
 
 
