@@ -46,7 +46,7 @@ export function CardModal(): ReactElement {
         <div className="grid grid-cols-1 md:grid-cols-4 md:gap-4">
           <div className="col-span-3">
             <div className="w-full space-y-6">
-              <div className="flex items-start gap-x-3 w-full ml-8">
+              <div className="flex items-start gap-x-4 w-full ml-8">
                 {cardData && cardData.userName && <Member data={cardData} />}
                 {cardData && cardData.dueDate && <DueDate data={cardData} />}
               </div>
