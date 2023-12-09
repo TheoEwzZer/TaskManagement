@@ -16,6 +16,9 @@ export function ClerkProvider({ children }: ClerkProviderProps): ReactElement {
     <CustomClerkProvider
       appearance={{
         baseTheme: resolvedTheme === "dark" ? dark : undefined,
+        layout: {
+          privacyPageUrl: "https://task-management-theo.vercel.app/privacy",
+        },
       }}
     >
       {children}
