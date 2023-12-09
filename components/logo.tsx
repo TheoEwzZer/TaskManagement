@@ -21,7 +21,12 @@ export function Logo(): ReactElement {
           height={40}
           width={40}
         />
-        <p className={cn("text-lg text-neutral-700", headingFont.className)}>
+        <p
+          className={cn(
+            "text-lg text-neutral-700 dark:text-neutral-300",
+            headingFont.className
+          )}
+        >
           TaskManagement
         </p>
       </div>

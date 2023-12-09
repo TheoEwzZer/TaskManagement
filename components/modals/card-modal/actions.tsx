@@ -77,7 +77,7 @@ export function Actions({ data }: ActionProps): ReactElement {
         <Button
           onClick={onCopy}
           disabled={isLoadingCopy}
-          variant="gray"
+          variant="accent"
           className="w-full justify-start"
           size="inline"
         >
@@ -87,7 +87,7 @@ export function Actions({ data }: ActionProps): ReactElement {
         <Button
           onClick={onDelete}
           disabled={isLoadingDelete}
-          variant="gray"
+          variant="accent"
           className="w-full justify-start"
           size="inline"
         >

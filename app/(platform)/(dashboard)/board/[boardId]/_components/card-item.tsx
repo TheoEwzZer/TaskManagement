@@ -29,7 +29,7 @@ export function CardItem({ data, index }: CardItemProps): ReactElement {
           ref={provided.innerRef}
           role="button"
           onClick={(): void => cardModal.onOpen(data.id)}
-          className="border-2 border-transparent hover:border-black shadow-sm py-2 px-3 text-sm bg-white rounded-md flex flex-col"
+          className="border-2 border-transparent hover:border-primary shadow-sm py-2 px-3 text-sm bg-background dark:hover:border-background rounded-md flex flex-col"
         >
           <div className="pb-2 text-sm">
             <div>{data.title}</div>

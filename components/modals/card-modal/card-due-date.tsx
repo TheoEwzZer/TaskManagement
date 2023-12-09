@@ -94,7 +94,7 @@ export function CardDueDate({ data }: CardDueDateProps): ReactElement {
     >
       <PopoverTrigger asChild>
         <Button
-          variant="gray"
+          variant="accent"
           className="w-full justify-start"
           size="inline"
         >

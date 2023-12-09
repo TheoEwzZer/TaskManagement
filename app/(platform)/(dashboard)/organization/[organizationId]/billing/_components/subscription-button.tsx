@@ -37,7 +37,7 @@ export function SubscriptionButton({ isPro }: SubscriptionButtonProps): ReactEle
       <Button
         onClick={onClick}
         disabled={isLoading}
-        variant={"primary"}
+        variant="default"
       >
         {isPro ? "Manage subscription" : "Upgrade to Pro"}
       </Button>

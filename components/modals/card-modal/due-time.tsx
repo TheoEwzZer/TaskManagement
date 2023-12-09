@@ -172,7 +172,9 @@ export function DueDate({ data }: DueDateProps): ReactElement | null {
 
   return (
     <div className="w-max">
-      <p className="font-semibold text-neutral-700 mb-2 w-fit">Due date</p>
+      <p className="font-semibold text-neutral-700 dark:text-neutral-300 mb-2 w-fit">
+        Due date
+      </p>
       <Checkbox
         disabled={isLoading}
         checked={isChecked}

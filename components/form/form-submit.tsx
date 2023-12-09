@@ -11,21 +11,14 @@ interface FormSubmitProps {
   children: ReactNode;
   disabled?: boolean;
   className?: string;
-  variant?:
-    | "link"
-    | "default"
-    | "destructive"
-    | "outline"
-    | "secondary"
-    | "ghost"
-    | "primary";
+  variant?: "link" | "default" | "destructive" | "outline" | "secondary" | "ghost";
 }
 
 export function FormSubmit({
   children,
   disabled,
   className,
-  variant = "primary",
+  variant = "default",
 }: FormSubmitProps): ReactElement {
   const { pending } = useFormStatus();
 

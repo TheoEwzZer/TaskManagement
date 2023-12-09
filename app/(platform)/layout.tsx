@@ -1,20 +1,27 @@
 import { ReactElement, ReactNode } from "react";
 
-import { ClerkProvider } from "@clerk/nextjs";
 import { Toaster } from "sonner";
 
-import { ModalProvider } from "@/components/providers/modal-provider";
+import { ThemeProvider } from "@/components/providers/theme-provider";
+import { ClerkProvider } from "@/components/providers/clerk-provider";
 import { QueryProvider } from "@/components/providers/query-provider";
+import { ModalProvider } from "@/components/providers/modal-provider";
 
 function PlatformLayout({ children }: { children: ReactNode }): ReactElement {
   return (
-    <ClerkProvider>
-      <QueryProvider>
-        <Toaster />
-        <ModalProvider />
-        {children}
-      </QueryProvider>
-    </ClerkProvider>
+    <ThemeProvider
+      attribute="class"
+      defaultTheme="system"
+      enableSystem
+    >
+      <ClerkProvider>
+        <QueryProvider>
+          <Toaster />
+          <ModalProvider />
+          {children}
+        </QueryProvider>
+      </ClerkProvider>
+    </ThemeProvider>
   );
 }
 

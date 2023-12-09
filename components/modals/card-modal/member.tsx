@@ -62,7 +62,9 @@ export function Member({ data }: MemberProps): ReactElement | null {
 
   return (
     <div className="w-max">
-      <p className="font-semibold text-neutral-700 mb-2 w-fit">Member</p>
+      <p className="font-semibold text-neutral-700 dark:text-neutral-300 mb-2 w-fit">
+        Member
+      </p>
       <Popover>
         <PopoverTrigger asChild>
           <li className="flex items-center gap-x-2 w-fit">
@@ -74,7 +76,9 @@ export function Member({ data }: MemberProps): ReactElement | null {
             </Avatar>
             <div className="flex flex-col space-y-0.5">
               <p className="text-sm text-muted-foreground">
-                <span className="font-semibold text-neutral-700">{data.userName}</span>
+                <span className="font-semibold text-neutral-700 dark:text-neutral-300">
+                  {data.userName}
+                </span>
               </p>
             </div>
           </li>
@@ -84,13 +88,13 @@ export function Member({ data }: MemberProps): ReactElement | null {
           side="bottom"
           align="start"
         >
-          <div className="text-sm font-medium text-center text-neutral-600 pb-4">
+          <div className="text-sm font-medium text-center text-neutral-600 dark:text-neutral-400 pb-4">
             {data.userName}
           </div>
           <PopoverClose asChild>
             <Button
               variant="ghost"
-              className="h-auto w-auto p-2 absolute top-2 right-2 text-neutral-600"
+              className="h-auto w-auto p-2 absolute top-2 right-2 text-neutral-600 dark:text-neutral-400"
             >
               <X className="h-4 w-4" />
             </Button>

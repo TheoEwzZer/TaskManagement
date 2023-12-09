@@ -21,7 +21,9 @@ export function ActivityItem({ data }: ActivityItemProps): ReactElement {
       </Avatar>
       <div className="flex flex-col space-y-0.5">
         <p className="text-sm text-muted-foreground">
-          <span className="font-semibold text-neutral-700">{data.userName}</span>{" "}
+          <span className="font-semibold text-neutral-700 dark:text-neutral-300">
+            {data.userName}
+          </span>{" "}
           {generateLogMessage(data)}
         </p>
         <p className="text-xs text-muted-foreground">

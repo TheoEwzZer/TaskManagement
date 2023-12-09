@@ -35,7 +35,7 @@ export async function BoardList(): Promise<ReactElement> {
 
   return (
     <div className="space-y-4">
-      <div className="flex items-center font-semibold text-lg text-neutral-700">
+      <div className="flex items-center font-semibold text-lg text-neutral-700 dark:text-neutral-300">
         <User2 className="h-6 w-6 mr-2" />
         Your boards
       </div>
@@ -45,7 +45,7 @@ export async function BoardList(): Promise<ReactElement> {
             <Link
               key={board.id}
               href={`/board/${board.id}`}
-              className="group relative aspect-video bg-no-repeat bg-center bg-cover bg-sky-700 rounded-sm h-full w-full p-2 overflow-hidden"
+              className="group relative aspect-video bg-no-repeat bg-center bg-cover rounded-sm h-full w-full p-2 overflow-hidden"
               style={{ backgroundImage: `url(${board.imageThumbUrl})` }}
             >
               <div className="absolute inset-0 bg-black/30 group-hover:bg-black/40 transition" />

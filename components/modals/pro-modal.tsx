@@ -28,9 +28,9 @@ export function ProModal(): ReactElement {
       onOpenChange={proModal.onClose}
     >
       <DialogContent className="max-w-md p-0 overflow-hidden">
-        <div className="text-neutral-700 mx-auto space-y-6 p-6">
+        <div className="text-neutral-700 dark:text-neutral-300 mx-auto space-y-6 p-6">
           <h2 className="font-semibold text-xl">Upgrade to TaskManagement Today!</h2>
-          <p className="text-xs font-semibold text-neutral-600">
+          <p className="text-xs font-semibold text-neutral-600 dark:text-neutral-400">
             Explore the best of TaskManagement
           </p>
           <div className="pl-3">
@@ -43,7 +43,7 @@ export function ProModal(): ReactElement {
             disabled={isLoading}
             onClick={onClick}
             className="w-full"
-            variant="primary"
+            variant="default"
           >
             Upgrade
           </Button>
