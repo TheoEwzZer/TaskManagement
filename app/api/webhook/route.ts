@@ -23,10 +23,10 @@ export async function POST(req: Request): Promise<NextResponse<unknown>> {
 
   const session = event.data.object as Stripe.Checkout.Session;
 
-  if (event.type === "checkout.session.completed") {
-    const subscription: Stripe.Response<Stripe.Subscription> =
-      await stripe.subscriptions.retrieve(session.subscription as string);
+  const subscription: Stripe.Response<Stripe.Subscription> =
+    await stripe.subscriptions.retrieve(session.subscription as string);
 
+  if (event.type === "checkout.session.completed") {
     if (!session?.metadata?.orgId) {
       return new NextResponse("Org ID is required", { status: 400 });
     }
@@ -43,9 +43,6 @@ export async function POST(req: Request): Promise<NextResponse<unknown>> {
   }
 
   if (event.type === "invoice.payment_succeeded") {
-    const subscription: Stripe.Response<Stripe.Subscription> =
-      await stripe.subscriptions.retrieve(session.subscription as string);
-
     await db.orgSubscription.update({
       where: {
         stripeSubscriptionId: subscription.id,
@@ -58,9 +55,6 @@ export async function POST(req: Request): Promise<NextResponse<unknown>> {
   }
 
   if (event.type === "customer.subscription.deleted") {
-    const subscription: Stripe.Response<Stripe.Subscription> =
-      await stripe.subscriptions.retrieve(session.subscription as string);
-
     await db.orgSubscription.delete({
       where: {
         stripeSubscriptionId: subscription.id,
@@ -68,5 +62,5 @@ export async function POST(req: Request): Promise<NextResponse<unknown>> {
     });
   }
 
-  return new NextResponse(null, { status: 200 });
+  return new NextResponse(`Subscription ID: ${subscription.id}`, { status: 200 });
 }
