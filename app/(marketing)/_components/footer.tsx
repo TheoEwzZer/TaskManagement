@@ -10,7 +10,8 @@ function Footer(): ReactElement {
       className={`
         w-full 
         border-t 
-      bg-slate-100 
+        border-[#e7e5e4]
+        bg-slate-100 
         p-4
       `}
     >

@@ -9,26 +9,34 @@ function Features(): ReactElement {
         </h2>
         <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
           <div className="rounded-lg bg-gray-200 p-6 font-bold shadow-xl">
-            <h3 className="mb-2 text-lg font-semibold">Task Organization</h3>
+            <h3 className="mb-2 text-lg font-semibold text-gray-700">
+              Task Organization
+            </h3>
             <p className="text-sm text-gray-600">
               Easily organize your tasks into lists or categories for efficient
               management.
             </p>
           </div>
           <div className="rounded-lg bg-gray-200 p-6 font-bold shadow-xl">
-            <h3 className="mb-2 text-lg font-semibold">Due Date Reminders</h3>
+            <h3 className="mb-2 text-lg font-semibold text-gray-700">
+              Due Date Reminders
+            </h3>
             <p className="text-sm text-gray-600">
               Set due dates and receive timely reminders to stay on top of your tasks.
             </p>
           </div>
           <div className="rounded-lg bg-gray-200 p-6 font-bold shadow-xl">
-            <h3 className="mb-2 text-lg font-semibold">Collaborative Work</h3>
+            <h3 className="mb-2 text-lg font-semibold text-gray-700">
+              Collaborative Work
+            </h3>
             <p className="text-sm text-gray-600">
               Collaborate with team members, assign tasks, and track progress together.
             </p>
           </div>
           <div className="rounded-lg bg-gray-200 p-6 font-bold shadow-xl">
-            <h3 className="mb-2 text-lg font-semibold">Priority Management</h3>
+            <h3 className="mb-2 text-lg font-semibold text-gray-700">
+              Priority Management
+            </h3>
             <p className="text-sm text-gray-600">
               Mark tasks with priorities to focus on what is most important.
             </p>
