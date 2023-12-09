@@ -57,5 +57,16 @@ export async function POST(req: Request): Promise<NextResponse<unknown>> {
     });
   }
 
+  if (event.type === "customer.subscription.deleted") {
+    const subscription: Stripe.Response<Stripe.Subscription> =
+      await stripe.subscriptions.retrieve(session.subscription as string);
+
+    await db.orgSubscription.delete({
+      where: {
+        stripeSubscriptionId: subscription.id,
+      },
+    });
+  }
+
   return new NextResponse(null, { status: 200 });
 }
