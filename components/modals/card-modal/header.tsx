@@ -63,8 +63,8 @@ export function Header({ data }: HeaderProps): ReactElement {
   };
 
   return (
-    <div className="flex items-start gap-x-3 mb-6 w-full">
-      <Layout className="h-5 w-5 mt-1 text-neutral-700 dark:text-neutral-300" />
+    <div className="mb-6 flex w-full items-start gap-x-3">
+      <Layout className="mt-1 h-5 w-5 text-neutral-700 dark:text-neutral-300" />
       <div className="w-full">
         <form action={onSubmit}>
           <FormInput
@@ -72,7 +72,22 @@ export function Header({ data }: HeaderProps): ReactElement {
             onBlur={onBlur}
             id="title"
             defaultValue={title}
-            className="font-semibold text-xl px-1 text-neutral-700 dark:text-neutral-300 bg-transparent border-transparent relative -left-1.5 w-[95%] focus-visible:bg-transparent focus-visible:border-input mb-0.5 truncate"
+            className={`
+              relative 
+              -left-1.5 
+              mb-0.5 
+              w-[95%] 
+              truncate 
+              border-transparent 
+              bg-transparent 
+              px-1 
+              text-xl 
+              font-semibold 
+              text-neutral-700 
+              focus-visible:border-input 
+              focus-visible:bg-transparent 
+              dark:text-neutral-300
+            `}
           />
         </form>
         <p className="text-sm text-muted-foreground">
@@ -85,11 +100,11 @@ export function Header({ data }: HeaderProps): ReactElement {
 
 Header.Skeleton = function HeaderSkeleton(): ReactElement {
   return (
-    <div className="flex items-start gap-x-3 mb-6">
-      <Skeleton className="h-6 w-6 mt-1 bg-neutral-200" />
+    <div className="mb-6 flex items-start gap-x-3">
+      <Skeleton className="mt-1 h-6 w-6 bg-neutral-200" />
       <div>
-        <Skeleton className="w-24 h-6 mb-1 bg-neutral-200" />
-        <Skeleton className="w-12 h-4 bg-neutral-200" />
+        <Skeleton className="mb-1 h-6 w-24 bg-neutral-200" />
+        <Skeleton className="h-4 w-12 bg-neutral-200" />
       </div>
     </div>
   );

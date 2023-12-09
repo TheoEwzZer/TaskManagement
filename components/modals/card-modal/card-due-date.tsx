@@ -98,11 +98,11 @@ export function CardDueDate({ data }: CardDueDateProps): ReactElement {
           className="w-full justify-start"
           size="inline"
         >
-          <Clock className="h-4 w-4 mr-2" />
+          <Clock className="mr-2 h-4 w-4" />
           Dates
         </Button>
       </PopoverTrigger>
-      <PopoverContent className="w-auto p-0 flex flex-col items-center">
+      <PopoverContent className="flex w-auto flex-col items-center p-0">
         <Calendar
           mode="single"
           selected={date}
@@ -112,7 +112,7 @@ export function CardDueDate({ data }: CardDueDateProps): ReactElement {
         <Button
           onClick={updateDate}
           disabled={isLoading}
-          className="w-[calc(100%-0.75rem)] my-1 justify-center"
+          className="my-1 w-[calc(100%-0.75rem)] justify-center"
         >
           Save
         </Button>
@@ -120,7 +120,7 @@ export function CardDueDate({ data }: CardDueDateProps): ReactElement {
           variant="outline"
           onClick={removeDate}
           disabled={isLoading}
-          className="w-[calc(100%-0.75rem)] my-1 justify-center"
+          className="my-1 w-[calc(100%-0.75rem)] justify-center"
         >
           Remove
         </Button>

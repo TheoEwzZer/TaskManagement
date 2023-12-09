@@ -62,12 +62,12 @@ export function Member({ data }: MemberProps): ReactElement | null {
 
   return (
     <div className="w-max">
-      <p className="font-semibold text-neutral-700 dark:text-neutral-300 mb-2 w-fit">
+      <p className="mb-2 w-fit font-semibold text-neutral-700 dark:text-neutral-300">
         Member
       </p>
       <Popover>
         <PopoverTrigger asChild>
-          <li className="flex items-center gap-x-2 w-fit">
+          <li className="flex w-fit items-center gap-x-2">
             <Avatar className="h-8 w-8">
               <AvatarImage
                 src={data.userImage}
@@ -84,17 +84,35 @@ export function Member({ data }: MemberProps): ReactElement | null {
           </li>
         </PopoverTrigger>
         <PopoverContent
-          className="px-0 pt-3 pb-3"
+          className="px-0 pb-3 pt-3"
           side="bottom"
           align="start"
         >
-          <div className="text-sm font-medium text-center text-neutral-600 dark:text-neutral-400 pb-4">
+          <div
+            className={`
+              pb-4
+              text-center 
+              text-sm 
+              font-medium 
+              text-neutral-600 
+              dark:text-neutral-400
+            `}
+          >
             {data.userName}
           </div>
           <PopoverClose asChild>
             <Button
               variant="ghost"
-              className="h-auto w-auto p-2 absolute top-2 right-2 text-neutral-600 dark:text-neutral-400"
+              className={`
+                absolute 
+                right-2 
+                top-2 
+                h-auto 
+                w-auto 
+                p-2 
+                text-neutral-600 
+                dark:text-neutral-400
+              `}
             >
               <X className="h-4 w-4" />
             </Button>
@@ -103,7 +121,16 @@ export function Member({ data }: MemberProps): ReactElement | null {
             variant="ghost"
             onClick={onRemove}
             disabled={isLoading}
-            className="rounded-none w-full h-auto p-2 px-5 justify-start font-normal text-sm"
+            className={`
+              h-auto 
+              w-full 
+              justify-start 
+              rounded-none 
+              p-2 
+              px-5 
+              text-sm 
+              font-normal
+            `}
           >
             Remove from card
           </Button>

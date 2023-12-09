@@ -1,12 +1,10 @@
 import { ReactElement } from "react";
 
-import Link from "next/link";
 import localFont from "next/font/local";
 import { NextFont } from "next/dist/compiled/@next/font";
 import { Poppins } from "next/font/google";
 
 import { cn } from "@/lib/utils";
-import { Button } from "@/components/ui/button";
 
 const headingFont: NextFont = localFont({
   src: "../../../public/fonts/font.woff2",
@@ -20,20 +18,62 @@ const textFont: NextFont = Poppins({
 function PrivacyPolicyPage(): ReactElement {
   return (
     <>
-      <div className="flex flex-col items-center justify-center py-12 px-4 md:px-10 lg:px-20 text-gray-800 pb-40 pt-40 bg-gradient-to-br from-pink-600 to-yellow-400">
+      <div
+        className={`
+          flex 
+          flex-col 
+          items-center 
+          justify-center 
+          bg-gradient-to-br 
+          from-pink-600 
+          to-yellow-400 
+          px-4 
+          py-12 
+          pb-40 
+          pt-40 
+          text-gray-800 
+          md:px-10 
+          lg:px-20
+        `}
+      >
         <div
           className={cn(
-            "flex flex-col items-center justify-center space-y-6 text-center",
+            `
+            flex 
+            flex-col 
+            items-center 
+            justify-center 
+            space-y-6 
+            text-center
+          `,
             headingFont.className
           )}
         >
-          <h1 className="text-4xl md:text-6xl font-bold tracking-wide leading-tight text-white">
+          <h1
+            className={`
+              text-4xl 
+              font-bold 
+              leading-tight 
+              tracking-wide 
+              text-white 
+              md:text-6xl
+            `}
+          >
             Privacy Policy
           </h1>
         </div>
         <div
           className={cn(
-            "text-lg md:text-xl lg:text-2xl mt-8 max-w-md md:max-w-2xl text-center text-white",
+            `
+              mt-8 
+              max-w-md 
+              text-center 
+              text-lg 
+              text-white 
+              md:max-w-2xl 
+              md:text-xl 
+              lg:text-2xl
+            `,
             textFont.className
           )}
         >
@@ -48,7 +88,7 @@ function PrivacyPolicyPage(): ReactElement {
             document.
           </p>
           <br></br>
-          <h2 className="text-3xl font-bold mb-4">Information Collection and Usage</h2>
+          <h2 className="mb-4 text-3xl font-bold">Information Collection and Usage</h2>
           <br></br>
           <ul>
             <li>
@@ -66,7 +106,7 @@ function PrivacyPolicyPage(): ReactElement {
             <li>Payment information necessary to process transactions securely.</li>
           </ul>
           <br></br>
-          <h1 className="text-3xl font-bold mb-4">Use of Collected Information</h1>
+          <h1 className="mb-4 text-3xl font-bold">Use of Collected Information</h1>
           <br></br>
           <ul>
             <li>Providing, maintaining, and improving our task manager services.</li>
@@ -82,7 +122,7 @@ function PrivacyPolicyPage(): ReactElement {
             </li>
           </ul>
           <br></br>
-          <h1 className="text-3xl font-bold mb-4">Data Sharing and Disclosure</h1>
+          <h1 className="mb-4 text-3xl font-bold">Data Sharing and Disclosure</h1>
           <br></br>
           <p>
             Your personal information may be shared with trusted third parties only when
@@ -91,7 +131,7 @@ function PrivacyPolicyPage(): ReactElement {
             your data for purposes other than those outlined in this Privacy Policy.
           </p>
           <br></br>
-          <h1 className="text-3xl font-bold mb-4">Data Security</h1>
+          <h1 className="mb-4 text-3xl font-bold">Data Security</h1>
           <br></br>
           <p>
             We employ industry-standard security measures to protect your personal
@@ -100,7 +140,7 @@ function PrivacyPolicyPage(): ReactElement {
             internet or electronic storage can be entirely secure.
           </p>
           <br></br>
-          <h1 className="text-3xl font-bold mb-4">Your Rights</h1>
+          <h1 className="mb-4 text-3xl font-bold">Your Rights</h1>
           <br></br>
           <p>
             You retain certain rights regarding your personal information, including the

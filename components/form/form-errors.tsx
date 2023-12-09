@@ -22,9 +22,18 @@ export function FormErrors({ id, errors }: FormErrorsProps): ReactElement | null
         (error: string): ReactElement => (
           <div
             key={error}
-            className="flex items-center font-medium p-2 border border-rose-500 bg-rose-500/10 rounded-sm"
+            className={`
+              flex 
+              items-center 
+              rounded-sm 
+              border 
+              border-rose-500 
+              bg-rose-500/10 
+              p-2 
+              font-medium
+            `}
           >
-            <XCircle className="h-4 w-4 mr-2" />
+            <XCircle className="mr-2 h-4 w-4" />
             {error}
           </div>
         )

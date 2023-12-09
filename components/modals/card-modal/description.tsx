@@ -83,10 +83,10 @@ export function Description({ data }: DescriptionProps): ReactElement {
   };
 
   return (
-    <div className="flex items-start gap-x-3 w-full">
-      <AlignLeft className="h-5 w-5 mt-0.5 text-neutral-700 dark:text-neutral-300" />
+    <div className="flex w-full items-start gap-x-3">
+      <AlignLeft className="mt-0.5 h-5 w-5 text-neutral-700 dark:text-neutral-300" />
       <div className="w-full">
-        <p className="font-semibold text-neutral-700 dark:text-neutral-300 mb-2">
+        <p className="mb-2 font-semibold text-neutral-700 dark:text-neutral-300">
           Description
         </p>
         {isEditing ? (
@@ -97,7 +97,7 @@ export function Description({ data }: DescriptionProps): ReactElement {
           >
             <FormTextarea
               id="description"
-              className="w-full mt-2"
+              className="mt-2 w-full"
               placeholder="Add a more detailed description"
               defaultValue={data.description || undefined}
               errors={fieldErrors}
@@ -119,7 +119,7 @@ export function Description({ data }: DescriptionProps): ReactElement {
           <div
             onClick={enableEditing}
             role="button"
-            className="min-h-[78px] bg-accent text-sm font-medium py-3 px-3.5 rounded-md"
+            className="min-h-[78px] rounded-md bg-accent px-3.5 py-3 text-sm font-medium"
           >
             {data.description || "Add a more detailed description..."}
           </div>
@@ -131,10 +131,10 @@ export function Description({ data }: DescriptionProps): ReactElement {
 
 Description.Skeleton = function DescriptionSkeleton(): ReactElement {
   return (
-    <div className="flex items-start gap-x-3 w-full">
+    <div className="flex w-full items-start gap-x-3">
       <Skeleton className="h-6 w-6 bg-neutral-200" />
       <div className="w-full">
-        <Skeleton className="h-6 w-24 mb-2 bg-neutral-200" />
+        <Skeleton className="mb-2 h-6 w-24 bg-neutral-200" />
         <Skeleton className="h-20 w-full bg-neutral-200" />
       </div>
     </div>

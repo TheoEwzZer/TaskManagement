@@ -1,3 +1,4 @@
+/* eslint-disable indent */
 import { ReactElement } from "react";
 
 import { Card } from "@prisma/client";
@@ -5,7 +6,6 @@ import { Draggable, DraggableProvided } from "@hello-pangea/dnd";
 import { CardModalStore, useCardModal } from "@/hooks/use-card-modal";
 import { Avatar, AvatarImage } from "@/components/ui/avatar";
 import { Badge } from "@/components/ui/badge";
-import { cn } from "@/lib/utils";
 import { add, isPast, isWithinInterval } from "date-fns";
 import { Clock } from "lucide-react";
 
@@ -29,17 +29,30 @@ export function CardItem({ data, index }: CardItemProps): ReactElement {
           ref={provided.innerRef}
           role="button"
           onClick={(): void => cardModal.onOpen(data.id)}
-          className="border-2 border-transparent hover:border-primary shadow-sm py-2 px-3 text-sm bg-background dark:hover:border-background rounded-md flex flex-col"
+          className={`
+            flex 
+            flex-col 
+            rounded-md 
+            border-2 
+            border-transparent 
+            bg-background 
+            px-3 
+            py-2 
+            text-sm 
+            shadow-sm 
+            hover:border-primary 
+            dark:hover:border-background
+          `}
         >
           <div className="pb-2 text-sm">
             <div>{data.title}</div>
           </div>
-          <div className="text-sm flex justify-between space-x-3">
+          <div className="flex justify-between space-x-3 text-sm">
             {data && data.dueDate ? (
               <>
                 {data.isComplete ? (
                   <Badge variant="success">
-                    <Clock className="h-4 w-4 mr-1" />
+                    <Clock className="mr-1 h-4 w-4" />
                     {new Date(data.dueDate).toLocaleDateString("en-US", {
                       month: "short",
                       day: "numeric",
@@ -52,7 +65,7 @@ export function CardItem({ data, index }: CardItemProps): ReactElement {
                       end: add(new Date(), { hours: 24 }),
                     }) || isPast(data.dueDate) ? (
                       <Badge variant="destructive">
-                        <Clock className="h-4 w-4 mr-1" />
+                        <Clock className="mr-1 h-4 w-4" />
                         {new Date(data.dueDate).toLocaleDateString("en-US", {
                           month: "short",
                           day: "numeric",
@@ -60,7 +73,7 @@ export function CardItem({ data, index }: CardItemProps): ReactElement {
                       </Badge>
                     ) : (
                       <div className="flex">
-                        <Clock className="h-4 w-4 mr-1 mt-0.5" />
+                        <Clock className="mr-1 mt-0.5 h-4 w-4" />
                         {new Date(data.dueDate).toLocaleDateString("en-US", {
                           month: "short",
                           day: "numeric",

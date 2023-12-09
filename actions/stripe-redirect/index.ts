@@ -14,6 +14,7 @@ import { absoluteUrl } from "@/lib/utils";
 import { stripe } from "@/lib/stripe";
 import Stripe from "stripe";
 
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 async function handler(_data: InputType): Promise<ReturnType> {
   const { userId, orgId } = auth();
   const user: User | null = await currentUser();

@@ -18,7 +18,6 @@ import { Button } from "@/components/ui/button";
 import { X } from "lucide-react";
 import { toast } from "sonner";
 import { useRouter } from "next/navigation";
-import { AppRouterInstance } from "next/dist/shared/lib/app-router-context.shared-runtime";
 import { ProModalStore, useProModal } from "@/hooks/use-pro-modal";
 
 interface FormPopoverProps {
@@ -35,7 +34,7 @@ export function FormPopover({
   sideOffset = 0,
 }: FormPopoverProps): ReactElement {
   const proModal: ProModalStore = useProModal();
-  const router: AppRouterInstance = useRouter();
+  const router = useRouter();
   const closeRef: RefObject<HTMLButtonElement> = useRef<ElementRef<"button">>(null);
 
   const { execute, fieldErrors } = useAction(createBoard, {
@@ -66,7 +65,16 @@ export function FormPopover({
         side={side}
         sideOffset={sideOffset}
       >
-        <div className="text-sm font-medium text-center text-neutral-600 dark:text-neutral-400 pb-4">
+        <div
+          className={`
+            pb-4 
+            text-center 
+            text-sm 
+            font-medium 
+            text-neutral-600 
+            dark:text-neutral-400
+          `}
+        >
           Create board
         </div>
         <PopoverClose
@@ -74,7 +82,16 @@ export function FormPopover({
           asChild
         >
           <Button
-            className="h-auto w-auto p-2 absolute top-2 right-2 text-neutral-600 dark:text-neutral-400"
+            className={`
+              absolute 
+              right-2 
+              top-2 
+              h-auto 
+              w-auto 
+              p-2 
+              text-neutral-600 
+              dark:text-neutral-400
+            `}
             variant="ghost"
           >
             <X className="h-4 w-4" />

@@ -24,7 +24,8 @@ export async function checkSubscription(): Promise<boolean> {
 
   const isValid: boolean | "" | null =
     orgSubscription.stripePriceId &&
-    orgSubscription.stripeCurrentPeriodEnd?.getTime()! + DAY_IN_MS > Date.now();
+    orgSubscription.stripeCurrentPeriodEnd &&
+    orgSubscription.stripeCurrentPeriodEnd.getTime()! + DAY_IN_MS > Date.now();
 
   return !!isValid;
 }

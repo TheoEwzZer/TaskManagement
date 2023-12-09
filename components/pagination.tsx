@@ -36,8 +36,8 @@ function PageButton({
       size="icon"
       variant={isCurrent ? "default" : "ghost"}
       className={cn(
-        "rounded-full w-8 h-8",
-        displayValue === "..." ? "hover:bg-transparent hover:cursor-default" : ""
+        "h-8 w-8 rounded-full",
+        displayValue === "..." ? "hover:cursor-default hover:bg-transparent" : ""
       )}
       onClick={handleClick}
     >
@@ -48,11 +48,11 @@ function PageButton({
 
 export function Pagination({ page, count, onChange }: PaginationProps): ReactElement {
   return (
-    <div className="flex my-4 space-x-3 justify-center">
+    <div className="my-4 flex justify-center space-x-3">
       <Button
         size="icon"
         variant="ghost"
-        className="rounded-full w-8 h-8"
+        className="h-8 w-8 rounded-full"
         onClick={(): void => onChange(Math.max(page - 1, 0))}
         disabled={page === 0}
       >
@@ -104,7 +104,7 @@ export function Pagination({ page, count, onChange }: PaginationProps): ReactEle
       <Button
         size="icon"
         variant="ghost"
-        className="rounded-full w-8 h-8"
+        className="h-8 w-8 rounded-full"
         onClick={(): void => {
           if (page !== count - 1) {
             onChange(page + 1);

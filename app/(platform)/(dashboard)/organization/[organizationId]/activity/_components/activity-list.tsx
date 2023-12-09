@@ -2,7 +2,6 @@
 
 import { ReactElement, useEffect, useState } from "react";
 import { ReadonlyURLSearchParams, useRouter, useSearchParams } from "next/navigation";
-import { AppRouterInstance } from "next/dist/shared/lib/app-router-context.shared-runtime";
 
 import { ActivityItem } from "@/components/activity-item";
 import { Skeleton } from "@/components/ui/skeleton";
@@ -17,7 +16,7 @@ export interface ActivityLog {
 }
 
 export function ActivityList(): ReactElement {
-  const router: AppRouterInstance = useRouter();
+  const router = useRouter();
   const searchParams: ReadonlyURLSearchParams = useSearchParams();
   const [page, setPage] = useState<number>(0);
   const [count, setCount] = useState<number>(0);
@@ -34,7 +33,7 @@ export function ActivityList(): ReactElement {
   useEffect((): void => {
     if (pageNumber < 0) {
       setPage(0);
-      router.push(`?page=0`);
+      router.push("?page=0");
     } else {
       setPage(pageNumber);
     }
@@ -46,7 +45,7 @@ export function ActivityList(): ReactElement {
     }
     if (data && data.auditLogs.length === 0) {
       setPage(0);
-      router.push(`?page=0`);
+      router.push("?page=0");
     }
   }, [data, router]);
 
@@ -61,8 +60,8 @@ export function ActivityList(): ReactElement {
 
   return (
     <>
-      <ol className="space-y-4 mt-4">
-        <p className="hidden last:block text-xs text-center text-muted-foreground">
+      <ol className="mt-4 space-y-4">
+        <p className="hidden text-center text-xs text-muted-foreground last:block">
           No activity found inside this organization
         </p>
         {data.auditLogs.map(
@@ -85,17 +84,17 @@ export function ActivityList(): ReactElement {
 
 ActivityList.Skeleton = function SkeletonActivityList(): ReactElement {
   return (
-    <ol className="space-y-4 mt-4">
-      <Skeleton className="w-[80%] h-10" />
-      <Skeleton className="w-[50%] h-10" />
-      <Skeleton className="w-[70%] h-10" />
-      <Skeleton className="w-[80%] h-10" />
-      <Skeleton className="w-[75%] h-10" />
-      <Skeleton className="w-[80%] h-10" />
-      <Skeleton className="w-[50%] h-10" />
-      <Skeleton className="w-[70%] h-10" />
-      <Skeleton className="w-[80%] h-10" />
-      <Skeleton className="w-[75%] h-10" />
+    <ol className="mt-4 space-y-4">
+      <Skeleton className="h-10 w-[80%]" />
+      <Skeleton className="h-10 w-[50%]" />
+      <Skeleton className="h-10 w-[70%]" />
+      <Skeleton className="h-10 w-[80%]" />
+      <Skeleton className="h-10 w-[75%]" />
+      <Skeleton className="h-10 w-[80%]" />
+      <Skeleton className="h-10 w-[50%]" />
+      <Skeleton className="h-10 w-[70%]" />
+      <Skeleton className="h-10 w-[80%]" />
+      <Skeleton className="h-10 w-[75%]" />
     </ol>
   );
 };

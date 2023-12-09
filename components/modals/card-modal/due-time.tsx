@@ -1,3 +1,4 @@
+/* eslint-disable indent */
 "use client";
 
 import { ReactElement, useEffect, useState } from "react";
@@ -172,7 +173,7 @@ export function DueDate({ data }: DueDateProps): ReactElement | null {
 
   return (
     <div className="w-max">
-      <p className="font-semibold text-neutral-700 dark:text-neutral-300 mb-2 w-fit">
+      <p className="mb-2 w-fit font-semibold text-neutral-700 dark:text-neutral-300">
         Due date
       </p>
       <Checkbox
@@ -253,7 +254,7 @@ export function DueDate({ data }: DueDateProps): ReactElement | null {
               )}
           </Button>
         </PopoverTrigger>
-        <PopoverContent className="w-auto p-0 flex flex-col items-center">
+        <PopoverContent className="flex w-auto flex-col items-center p-0">
           <Calendar
             mode="single"
             selected={date}
@@ -263,7 +264,7 @@ export function DueDate({ data }: DueDateProps): ReactElement | null {
           <Button
             onClick={updateDate}
             disabled={isLoading}
-            className="w-[calc(100%-0.75rem)] my-1 justify-center"
+            className="my-1 w-[calc(100%-0.75rem)] justify-center"
           >
             Save
           </Button>
@@ -271,7 +272,7 @@ export function DueDate({ data }: DueDateProps): ReactElement | null {
             variant="outline"
             onClick={removeDate}
             disabled={isLoading}
-            className="w-[calc(100%-0.75rem)] my-1 justify-center"
+            className="my-1 w-[calc(100%-0.75rem)] justify-center"
           >
             Remove
           </Button>

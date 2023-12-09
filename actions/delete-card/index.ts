@@ -8,7 +8,7 @@ import { db } from "@/lib/db";
 import { createAuditLog } from "@/lib/create-audit-log";
 
 import { ActionState, createSafeAction } from "@/lib/create-safe-action";
-import { Card, List } from "@prisma/client";
+import { Card } from "@prisma/client";
 import { DeleteCard } from "./schema";
 import { InputType, ReturnType } from "./types";
 

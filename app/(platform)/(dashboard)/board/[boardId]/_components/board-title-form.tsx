@@ -65,7 +65,17 @@ export function BoardTileForm({ data }: BoardTileFormProps): ReactElement {
           id="title"
           onBlur={onBlur}
           defaultValue={title}
-          className="text-lg font-bold px-[7px] py-1 h-7 bg-transparent focus-visible:outline-none focus-visible:ring-transparent border-none"
+          className="
+            h-7 
+            border-none 
+            bg-transparent 
+            px-[7px] 
+            py-1 
+            text-lg 
+            font-bold 
+            focus-visible:outline-none 
+            focus-visible:ring-transparent
+          "
         />
       </form>
     );
@@ -75,7 +85,7 @@ export function BoardTileForm({ data }: BoardTileFormProps): ReactElement {
     <Button
       onClick={enableEditing}
       variant="transparent"
-      className="font-bold text-lg h-auto w-auto p-1 px-2"
+      className="h-auto w-auto p-1 px-2 text-lg font-bold"
     >
       {title}
     </Button>

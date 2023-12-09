@@ -13,10 +13,10 @@ interface ActivityProps {
 
 export function Activity({ items }: ActivityProps): ReactElement {
   return (
-    <div className="flex items-start gap-x-3 w-full">
-      <ActivityIcon className="h-5 w-5 mt-0.5 text-neutral-700 dark:text-neutral-300" />
+    <div className="flex w-full items-start gap-x-3">
+      <ActivityIcon className="mt-0.5 h-5 w-5 text-neutral-700 dark:text-neutral-300" />
       <div className="w-full">
-        <p className="font-semibold text-neutral-700 dark:text-neutral-300 mb-2">
+        <p className="mb-2 font-semibold text-neutral-700 dark:text-neutral-300">
           Activity
         </p>
         <ol className="mt-2 space-y-4">
@@ -36,11 +36,11 @@ export function Activity({ items }: ActivityProps): ReactElement {
 
 Activity.Skeleton = function ActivitySkeleton(): ReactElement {
   return (
-    <div className="flex items-start gap-x-3 w-full">
+    <div className="flex w-full items-start gap-x-3">
       <Skeleton className="h-6 w-6 bg-neutral-200" />
       <div className="w-full">
-        <Skeleton className="w-24 h-6 mb-2 bg-neutral-200" />
-        <Skeleton className="w-full h-10 bg-neutral-200" />
+        <Skeleton className="mb-2 h-6 w-24 bg-neutral-200" />
+        <Skeleton className="h-10 w-full bg-neutral-200" />
       </div>
     </div>
   );

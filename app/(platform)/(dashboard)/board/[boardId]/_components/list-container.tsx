@@ -80,7 +80,7 @@ export function ListContainer({ data, boardId }: ListContainerProps): ReactEleme
     }
 
     if (type === "card") {
-      let newOrderedData: ListWithCards[] = [...orderedData];
+      const newOrderedData: ListWithCards[] = [...orderedData];
 
       const sourceList: ListWithCards | undefined = newOrderedData.find(
         (list: ListWithCards): boolean => list.id === source.droppableId
@@ -155,7 +155,7 @@ export function ListContainer({ data, boardId }: ListContainerProps): ReactEleme
           <ol
             {...provided.droppableProps}
             ref={provided.innerRef}
-            className="flex gap-x-3 h-full"
+            className="flex h-full gap-x-3"
           >
             {orderedData.map((list: ListWithCards, index: number): ReactElement => {
               return (
@@ -168,7 +168,7 @@ export function ListContainer({ data, boardId }: ListContainerProps): ReactEleme
             })}
             {provided.placeholder}
             <ListForm />
-            <div className="flex-shrink-0 w-1"></div>
+            <div className="w-1 flex-shrink-0"></div>
           </ol>
         )}
       </Droppable>

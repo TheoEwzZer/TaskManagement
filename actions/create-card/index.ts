@@ -9,7 +9,7 @@ import { createAuditLog } from "@/lib/create-audit-log";
 import { InputType, ReturnType } from "./types";
 import { ActionState, createSafeAction } from "@/lib/create-safe-action";
 import { CreateCard } from "./schema";
-import { Board, Card, List } from "@prisma/client";
+import { Card, List } from "@prisma/client";
 
 async function handler(data: InputType): Promise<ReturnType> {
   const { userId, orgId } = auth();

@@ -14,7 +14,7 @@ const headingFont: NextFont = localFont({
 export function Logo(): ReactElement {
   return (
     <Link href="/">
-      <div className="hover:opacity-75 transition items-center gap-x-2 hidden md:flex">
+      <div className="hidden items-center gap-x-2 transition hover:opacity-75 md:flex">
         <Image
           src="/logo.png"
           alt="Logo"

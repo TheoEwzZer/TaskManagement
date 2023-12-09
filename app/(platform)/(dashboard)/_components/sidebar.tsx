@@ -49,7 +49,7 @@ export function Sidebar({ storageKey = "t-sidebar-state" }: SidebarProps): React
   if (!isLoadedOrg || !isLoadedOrgList || userMemberships.isLoading) {
     return (
       <>
-        <div className="flex items-center justify-between mb-2">
+        <div className="mb-2 flex items-center justify-between">
           <Skeleton className="h-10 w-[50%]" />
           <Skeleton className="h-10 w-10" />
         </div>
@@ -64,7 +64,7 @@ export function Sidebar({ storageKey = "t-sidebar-state" }: SidebarProps): React
 
   return (
     <>
-      <div className="font-medium text-xs flex items-center mb-1">
+      <div className="mb-1 flex items-center text-xs font-medium">
         <span className="pl-4">Workspaces</span>
         <Button
           asChild

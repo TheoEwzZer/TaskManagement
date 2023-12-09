@@ -31,7 +31,7 @@ function Testimonial({ testimonial, direction }: TestimonialProps): ReactElement
       key={testimonial.id}
     >
       <div>
-        <p className="text-lg font-semibold mb-2">{testimonial.name}</p>
+        <p className="mb-2 text-lg font-semibold">{testimonial.name}</p>
         <p className="text-sm text-gray-600">{testimonial.comment}</p>
       </div>
     </motion.div>
@@ -71,10 +71,10 @@ function Testimonials(): ReactElement {
 
   return (
     <div className="container mx-auto py-12">
-      <h2 className="text-4xl font-extrabold mb-8 text-center text-orange-600">
+      <h2 className="mb-8 text-center text-4xl font-extrabold text-orange-600">
         Testimonials
       </h2>
-      <div className="flex items-center justify-center mb-4">
+      <div className="mb-4 flex items-center justify-center">
         <Button
           variant="link"
           onClick={prevTestimonial}
@@ -83,7 +83,7 @@ function Testimonials(): ReactElement {
           <ChevronLeft className="h-10 w-10" />
         </Button>
         <motion.div
-          className={`testimonial-container shadow-xl rounded-xl p-8 bg-gray-200 font-bold relative ${"sm:w-full md:w-3/4 lg:w-2/3 xl:w-1/2"} ${"overflow-hidden sm:max-h-96 md:max-h-80 lg:max-h-64 xl:max-h-56"}`}
+          className={`testimonial-container relative rounded-xl bg-gray-200 p-8 font-bold shadow-xl ${"sm:w-full md:w-3/4 lg:w-2/3 xl:w-1/2"} ${"overflow-hidden sm:max-h-96 md:max-h-80 lg:max-h-64 xl:max-h-56"}`}
         >
           <Testimonial
             testimonial={testimonies[currentIndex]}

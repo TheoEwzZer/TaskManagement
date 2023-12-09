@@ -69,11 +69,20 @@ export function ListOptions({ data, onAddCard }: ListOptionsProps): ReactElement
         </Button>
       </PopoverTrigger>
       <PopoverContent
-        className="px-0 pt-3 pb-3"
+        className="px-0 pb-3 pt-3"
         side="bottom"
         align="start"
       >
-        <div className="text-sm font-medium text-center text-neutral-600 dark:text-neutral-400 pb-4">
+        <div
+          className={`
+            pb-4 
+            text-center 
+            text-sm 
+            font-medium 
+            text-neutral-600 
+            dark:text-neutral-400
+          `}
+        >
           Lists actions
         </div>
         <PopoverClose
@@ -81,7 +90,16 @@ export function ListOptions({ data, onAddCard }: ListOptionsProps): ReactElement
           asChild
         >
           <Button
-            className="h-auto w-auto p-2 absolute top-2 right-2 text-neutral-600 dark:text-neutral-400"
+            className={`
+              absolute 
+              right-2 
+              top-2 
+              h-auto 
+              w-auto 
+              p-2 
+              text-neutral-600 
+              dark:text-neutral-400
+            `}
             variant="ghost"
           >
             <X className="h-4 w-4" />
@@ -90,7 +108,16 @@ export function ListOptions({ data, onAddCard }: ListOptionsProps): ReactElement
         <Button
           onClick={onAddCard}
           variant="ghost"
-          className="rounded-none w-full h-auto p-2 px-5 justify-start font-normal text-sm"
+          className={`
+            h-auto 
+            w-full 
+            justify-start 
+            rounded-none 
+            p-2 
+            px-5 
+            text-sm 
+            font-normal
+          `}
         >
           Add card...
         </Button>
@@ -109,7 +136,15 @@ export function ListOptions({ data, onAddCard }: ListOptionsProps): ReactElement
           />
           <FormSubmit
             variant="ghost"
-            className="rounded-none w-full h-auto p-2 px-5 justify-start font-normal text-sm"
+            className={`
+              h-auto 
+              w-full 
+              justify-start 
+              rounded-none 
+              p-2 px-5 
+              text-sm 
+              font-normal
+            `}
           >
             Copy list..
           </FormSubmit>
@@ -130,7 +165,16 @@ export function ListOptions({ data, onAddCard }: ListOptionsProps): ReactElement
           />
           <FormSubmit
             variant="ghost"
-            className="rounded-none w-full h-auto p-2 px-5 justify-start font-normal text-sm"
+            className={`
+              h-auto 
+              w-full 
+              justify-start 
+              rounded-none 
+              p-2 
+              px-5 
+              text-sm 
+              font-normal
+            `}
           >
             Delete this list
           </FormSubmit>

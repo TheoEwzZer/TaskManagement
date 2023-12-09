@@ -5,7 +5,6 @@ import { useState, useRef, ElementRef, ReactElement, RefObject } from "react";
 import { toast } from "sonner";
 import { Plus, X } from "lucide-react";
 import { useParams, useRouter } from "next/navigation";
-import { AppRouterInstance } from "next/dist/shared/lib/app-router-context.shared-runtime";
 import { useEventListener, useOnClickOutside } from "usehooks-ts";
 
 import { useAction } from "@/hooks/use-action";
@@ -18,7 +17,7 @@ import { createList } from "@/actions/create-list";
 import { List } from "@prisma/client";
 
 export function ListForm(): ReactElement {
-  const router: AppRouterInstance = useRouter();
+  const router = useRouter();
   const params = useParams();
 
   const formRef: RefObject<HTMLFormElement> = useRef<ElementRef<"form">>(null);
@@ -70,13 +69,23 @@ export function ListForm(): ReactElement {
         <form
           action={onSubmit}
           ref={formRef}
-          className="w-full p-3 rounded-md bg-background space-y-4 shadow-md"
+          className="w-full space-y-4 rounded-md bg-background p-3 shadow-md"
         >
           <FormInput
             ref={inputRef}
             errors={fieldErrors}
             id="title"
-            className="text-sm px-2 py-1 h-7 font-medium border-transparent hover:border-input focus:border-input transition"
+            className="
+              h-7 
+              border-transparent 
+              px-2 
+              py-1 
+              text-sm 
+              font-medium 
+              transition 
+              hover:border-input 
+              focus:border-input
+            "
             placeholder="Enter list title..."
           />
           <input
@@ -103,9 +112,20 @@ export function ListForm(): ReactElement {
     <ListWrapper>
       <button
         onClick={enableEditing}
-        className="w-full rounded-md bg-accent/80 hover:bg-accent/50 transition p-3 flex items-center font-medium text-sm"
+        className="
+          flex 
+          w-full 
+          items-center 
+          rounded-md 
+          bg-accent/80 
+          p-3 
+          text-sm 
+          font-medium 
+          transition 
+          hover:bg-accent/50
+        "
       >
-        <Plus className="h-4 w-4 mr-2" />
+        <Plus className="mr-2 h-4 w-4" />
         Add a list
       </button>
     </ListWrapper>

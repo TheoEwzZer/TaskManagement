@@ -21,18 +21,20 @@ export function Info({ isPro }: InfoProps): ReactElement {
 
   return (
     <div className="flex items-center gap-x-4">
-      <div className="w-[60px] h-[60px] relative">
-        <Image
-          fill
-          src={organization?.imageUrl!}
-          alt="Organization"
-          className="rounded-md object-cover"
-        />
-      </div>
+      {organization && organization.imageUrl && (
+        <div className="relative h-[60px] w-[60px]">
+          <Image
+            fill
+            src={organization.imageUrl}
+            alt="Organization"
+            className="rounded-md object-cover"
+          />
+        </div>
+      )}
       <div className="space-y-1">
-        <p className="font-semibold text-xl">{organization?.name}</p>
+        <p className="text-xl font-semibold">{organization?.name}</p>
         <div className="flex items-center text-xs text-muted-foreground">
-          <CreditCard className="h-3 w-3 mr-1" />
+          <CreditCard className="mr-1 h-3 w-3" />
           {isPro ? "Pro" : "Free"}
         </div>
       </div>
@@ -43,14 +45,14 @@ export function Info({ isPro }: InfoProps): ReactElement {
 Info.Skeleton = function SkeletonInfo(): ReactElement {
   return (
     <div className="flex items-center gap-x-4">
-      <div className="w-[60px] h-[60px] relative">
-        <Skeleton className="w-full h-full absolute" />
+      <div className="relative h-[60px] w-[60px]">
+        <Skeleton className="absolute h-full w-full" />
       </div>
       <div className="space-y-2">
-        <Skeleton className="w-[200px] h-10" />
+        <Skeleton className="h-10 w-[200px]" />
         <div className="flex items-center">
-          <Skeleton className="w-4 h-4 mr-2" />
-          <Skeleton className="w-[100px] h-4" />
+          <Skeleton className="mr-2 h-4 w-4" />
+          <Skeleton className="h-4 w-[100px]" />
         </div>
       </div>
     </div>

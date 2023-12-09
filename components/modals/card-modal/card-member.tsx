@@ -116,22 +116,40 @@ export function CardMember({ data }: ActionProps): ReactElement {
           className="w-full justify-start"
           size="inline"
         >
-          <UserRoundPlus className="h-4 w-4 mr-2" />
+          <UserRoundPlus className="mr-2 h-4 w-4" />
           Member
         </Button>
       </PopoverTrigger>
       <PopoverContent
-        className="px-0 pt-3 pb-3"
+        className="px-0 pb-3 pt-3"
         side="bottom"
         align="start"
       >
-        <div className="text-sm font-medium text-center text-neutral-600 dark:text-neutral-400 pb-4">
+        <div
+          className={`
+            pb-4 
+            text-center 
+            text-sm 
+            font-medium 
+            text-neutral-600 
+            dark:text-neutral-400
+          `}
+        >
           Member
         </div>
         <PopoverClose asChild>
           <Button
             variant="ghost"
-            className="h-auto w-auto p-2 absolute top-2 right-2 text-neutral-600 dark:text-neutral-400"
+            className={`
+              absolute 
+              right-2 
+              top-2 
+              h-auto 
+              w-auto 
+              p-2 
+              text-neutral-600 
+              dark:text-neutral-400
+            `}
           >
             <X className="h-4 w-4" />
           </Button>
@@ -148,7 +166,7 @@ export function CardMember({ data }: ActionProps): ReactElement {
                   onSelect={(): void => onAdd(member)}
                 >
                   {member && member.imageUrl && (
-                    <Avatar className="h-6 w-6 mr-2">
+                    <Avatar className="mr-2 h-6 w-6">
                       <AvatarImage
                         src={member.imageUrl}
                         alt={member.firstName + " " + member.lastName}

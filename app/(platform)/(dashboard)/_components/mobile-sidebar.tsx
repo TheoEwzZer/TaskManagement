@@ -41,7 +41,7 @@ export function MobileSidebar(): ReactElement | null {
     <>
       <Button
         onClick={onOpen}
-        className="block md:hidden mr-2"
+        className="mr-2 block md:hidden"
         variant="ghost"
         size="sm"
       >

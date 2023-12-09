@@ -78,7 +78,7 @@ export const CardForm = forwardRef<HTMLTextAreaElement, CardFormProps>(
         <form
           ref={formRef}
           action={onSubmit}
-          className="m-1 py-0.5 px-1 space-y-4"
+          className="m-1 space-y-4 px-1 py-0.5"
         >
           <FormTextarea
             id="title"
@@ -108,14 +108,22 @@ export const CardForm = forwardRef<HTMLTextAreaElement, CardFormProps>(
     }
 
     return (
-      <div className="pt-2 px-2">
+      <div className="px-2 pt-2">
         <Button
           onClick={enableEditing}
-          className="h-auto px-2 py-1.5 w-full justify-start text-muted-foreground text-sm"
+          className="
+            h-auto 
+            w-full 
+            justify-start 
+            px-2 
+            py-1.5 
+            text-sm 
+            text-muted-foreground
+          "
           size="sm"
           variant="ghost"
         >
-          <Plus className="h-4 w-4 mr-2" />
+          <Plus className="mr-2 h-4 w-4" />
           Add a card
         </Button>
       </div>
