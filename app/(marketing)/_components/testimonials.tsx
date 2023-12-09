@@ -43,26 +43,32 @@ function Testimonials(): ReactElement {
     {
       id: 1,
       name: "John Doe",
-      comment:
-        "TaskManagement is fantastic! It simplifies task organization and collaboration. The interface is intuitive, and the team loves it!",
+      comment: `
+        TaskManagement is fantastic! 
+        It simplifies task organization and collaboration. 
+        The interface is intuitive, and the team loves it!
+      `,
     },
     {
       id: 2,
       name: "Jane Smith",
-      comment:
-        "I've found TaskManagement incredibly useful. It's user-friendly and has boosted our team's productivity significantly.",
+      comment: `
+      I've found TaskManagement incredibly useful.
+      It's user-friendly and has boosted our team's productivity significantly.`,
     },
     {
       id: 3,
       name: "Emily Johnson",
-      comment:
-        "As a freelancer, TaskManagement keeps me on track with its easy-to-use features. Highly recommended for personal use!",
+      comment: `
+      As a freelancer, TaskManagement keeps me on track with its easy-to-use features.
+      Highly recommended for personal use!`,
     },
     {
       id: 4,
       name: "Michael Brown",
-      comment:
-        "TaskManagement has become an essential tool for our team. It's user-friendly and has improved our project management.",
+      comment: `
+      TaskManagement has become an essential tool for our team.
+      It's user-friendly and has improved our project management.`,
     },
   ];
 
@@ -83,7 +89,16 @@ function Testimonials(): ReactElement {
           <ChevronLeft className="h-10 w-10" />
         </Button>
         <motion.div
-          className={`testimonial-container relative rounded-xl bg-gray-200 p-8 font-bold shadow-xl ${"sm:w-full md:w-3/4 lg:w-2/3 xl:w-1/2"} ${"overflow-hidden sm:max-h-96 md:max-h-80 lg:max-h-64 xl:max-h-56"}`}
+          className={`
+            testimonial-container
+            relative rounded-xl 
+            bg-gray-200 
+            p-8 
+            font-bold 
+            shadow-xl 
+            ${"sm:w-full md:w-3/4 lg:w-2/3 xl:w-1/2"}
+            ${"overflow-hidden sm:max-h-96 md:max-h-80 lg:max-h-64 xl:max-h-56"}
+          `}
         >
           <Testimonial
             testimonial={testimonies[currentIndex]}

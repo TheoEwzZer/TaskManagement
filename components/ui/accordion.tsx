@@ -1,3 +1,4 @@
+/* eslint-disable max-len */
 "use client";
 
 import { ComponentPropsWithoutRef, ElementRef, ReactElement, forwardRef } from "react";

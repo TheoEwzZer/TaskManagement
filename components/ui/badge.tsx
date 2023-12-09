@@ -1,3 +1,4 @@
+/* eslint-disable max-len */
 import { HTMLAttributes, ReactElement } from "react";
 
 import { cva, type VariantProps } from "class-variance-authority";

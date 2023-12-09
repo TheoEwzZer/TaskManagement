@@ -1,9 +1,10 @@
+/* eslint-disable max-len */
 "use client";
 
 import { ComponentProps, ReactElement } from "react";
 
 import { ChevronLeft, ChevronRight } from "lucide-react";
-import { DayPicker, StyledComponent } from "react-day-picker";
+import { DayPicker } from "react-day-picker";
 
 import { cn } from "@/lib/utils";
 import { buttonVariants } from "@/components/ui/button";
@@ -53,12 +54,8 @@ function Calendar({
         ...classNames,
       }}
       components={{
-        IconLeft: ({ ...props }: StyledComponent): ReactElement => (
-          <ChevronLeft className="h-4 w-4" />
-        ),
-        IconRight: ({ ...props }: StyledComponent): ReactElement => (
-          <ChevronRight className="h-4 w-4" />
-        ),
+        IconLeft: (): ReactElement => <ChevronLeft className="h-4 w-4" />,
+        IconRight: (): ReactElement => <ChevronRight className="h-4 w-4" />,
       }}
       {...props}
     />
