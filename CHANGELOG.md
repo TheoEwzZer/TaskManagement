@@ -1,5 +1,57 @@
 # Changelog
 
+## [2.2.0](https://github.com/TheoEwzZer/TaskManagement/compare/v2.1.1...v2.2.0) (2023-12-09)
+
+
+### ✨ Features
+
+* add dark mode ([90f211c](https://github.com/TheoEwzZer/TaskManagement/commit/90f211c812ad26ef8f1f5341e2e3068700d739a6))
+* add dropdown menu component ([a88e2df](https://github.com/TheoEwzZer/TaskManagement/commit/a88e2dff81f40746d69c92b32c3303f524d5ed45))
+* add privacy page URL to ClerkProvider layout ([7c4bfed](https://github.com/TheoEwzZer/TaskManagement/commit/7c4bfed548ec4def9cdb0f57d0f87cc82331ce63))
+* update take value in GET function ([1e420ff](https://github.com/TheoEwzZer/TaskManagement/commit/1e420ff3ce7baf0d3f3e74f0882048a61811e884))
+
+
+### 🐛 Bug Fixes
+
+* add webhook handler for customer.subscription.deleted event ([7ee37a2](https://github.com/TheoEwzZer/TaskManagement/commit/7ee37a2daead0ba4fa0eee210b30f80ec9800c8c))
+* refactor webhook route to retrieve subscription information based on event type ([36ab734](https://github.com/TheoEwzZer/TaskManagement/commit/36ab73424b5b1ebb4898513011fb546ddcc5204d))
+
+
+### ⚡️ Performance Improvements
+
+* add cssnano plugin for production environment ([60b5317](https://github.com/TheoEwzZer/TaskManagement/commit/60b5317518a51b22911c07ffef9201694049c595))
+
+
+### ♻️ Code Refactoring
+
+* add formatter configurations ([16b0379](https://github.com/TheoEwzZer/TaskManagement/commit/16b0379a2312f0f9fab30c66fa8f1a71e721b8dc))
+* refactor all code ([d85ff1d](https://github.com/TheoEwzZer/TaskManagement/commit/d85ff1dc185c165a66af96239bc69864593a73de))
+* refactor all code ([39e0312](https://github.com/TheoEwzZer/TaskManagement/commit/39e0312dfcb0ecbacc6b3022022a17a2133813a2))
+* refactor DialogHeader and DialogFooter components ([50b1045](https://github.com/TheoEwzZer/TaskManagement/commit/50b1045447fc7156743b322062277171a70a3e18))
+* refactor webhook route logic ([38fa0c2](https://github.com/TheoEwzZer/TaskManagement/commit/38fa0c2348785d34bbad9b45d6a2e2f87872fb9a))
+
+
+### 💄 Styles
+
+* always use light mode in landing page ([a4e659e](https://github.com/TheoEwzZer/TaskManagement/commit/a4e659e30ab4f1eb99a416505c7fde79344fbfdc))
+* update color scheme in globals.css to orange theme ([b85dc24](https://github.com/TheoEwzZer/TaskManagement/commit/b85dc24956198350e0ea5fa0939faa70f76aa6af))
+
+
+### 📦 Dependencies
+
+* add cssnano package for CSS minification ([7d52a5b](https://github.com/TheoEwzZer/TaskManagement/commit/7d52a5b2df47d4f98aa08a61b762b5f7c42625f6))
+* add ESLint and Prettier ([32e2913](https://github.com/TheoEwzZer/TaskManagement/commit/32e29139b6e2ea7d2694766f802510184a14e52c))
+* add new dependencies for theme and dropdown menu ([5f5d28c](https://github.com/TheoEwzZer/TaskManagement/commit/5f5d28c248ab8a55faed3402e09b4adeeefbe139))
+* bump @clerk/nextjs from 4.27.4 to 4.27.5 ([47af34d](https://github.com/TheoEwzZer/TaskManagement/commit/47af34d71dd5c68f35eee6746cd9f407fbf9eb53))
+* bump eslint-config-next from 14.0.3 to 14.0.4 ([a36fcdb](https://github.com/TheoEwzZer/TaskManagement/commit/a36fcdb5384a896237bd296588935e3988db7929))
+* bump next from 14.0.3 to 14.0.4 ([a8fc670](https://github.com/TheoEwzZer/TaskManagement/commit/a8fc670890871de9c97cdbb12be70d4f34762917))
+* bump stripe from 14.7.0 to 14.8.0 ([1a5af53](https://github.com/TheoEwzZer/TaskManagement/commit/1a5af53ba57b78c359ce8470cac4e01715a9016d))
+
+
+### 📝 Documentation
+
+* remove Repository Structure section from README.md ([a21ab36](https://github.com/TheoEwzZer/TaskManagement/commit/a21ab36de8831a112510a0874bc2444e005ee154))
+
 ## [2.1.1](https://github.com/TheoEwzZer/TaskManagement/compare/v2.1.0...v2.1.1) (2023-12-07)
 
 
