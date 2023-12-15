@@ -41,7 +41,7 @@
     "react-dom": "^18",
     "react-hook-form": "^7.49.2",
     "sonner": "^1.2.4",
-    "stripe": "^14.8.0",
+    "stripe": "^14.9.0",
     "tailwind-merge": "^2.1.0",
     "tailwindcss-animate": "^1.0.7",
     "unsplash-js": "^7.0.18",
