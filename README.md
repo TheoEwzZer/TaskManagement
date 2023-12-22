@@ -70,6 +70,16 @@ This project is a web application inspired by Trello. It's designed to manage ta
 | 🛠️  | **Prisma ORM**                 | Use Prisma ORM for efficient database operations.                               |
 | 🎨  | **shadcnUI & TailwindCSS**     | Build the UI with shadcnUI & TailwindCSS for a sleek and intuitive interface.   |
 
+<div align="center">
+  <img src="public/images/1.png" alt="Image 1" style="width: 49%;"/>
+  <img src="public/images/2.png" alt="Image 2" style="width: 49%;"/>
+</div>
+
+<div align="center">
+  <img src="public/images/3.png" alt="Image 3" style="width: 49%;"/>
+  <img src="public/images/4.png" alt="Image 4" style="width: 49%;"/>
+</div>
+
 ---
 
 ## 🚀 Getting Started
