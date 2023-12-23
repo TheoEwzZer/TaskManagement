@@ -1,5 +1,67 @@
 # Changelog
 
+## [2.3.0](https://github.com/TheoEwzZer/TaskManagement/compare/v2.2.0...v2.3.0) (2023-12-23)
+
+
+### ✨ Features
+
+* add Card component and related sub-components ([4b283cf](https://github.com/TheoEwzZer/TaskManagement/commit/4b283cf97bdbd1e3480ae7444334f0c792ff410b))
+
+
+### 🐛 Bug Fixes
+
+* refactor pagination logic and fix page numbering ([e09b6e4](https://github.com/TheoEwzZer/TaskManagement/commit/e09b6e4982148bbba94843fba95dcf8645e71fcc))
+
+
+### ♻️ Code Refactoring
+
+* refactor features component to use dynamic rendering ([6e0bf20](https://github.com/TheoEwzZer/TaskManagement/commit/6e0bf2081084015b6048697497276bef5df146f5))
+
+
+### 💄 Styles
+
+* add responsive to dialog ([3da1dbe](https://github.com/TheoEwzZer/TaskManagement/commit/3da1dbe8cfd668547cfef440ced80fbccd27a200))
+* improve carousel style ([b731ee1](https://github.com/TheoEwzZer/TaskManagement/commit/b731ee19059e2828dc41d041faf33d0ca25aab4d))
+* use shadcn ui pagination ([8fc748d](https://github.com/TheoEwzZer/TaskManagement/commit/8fc748d6641e981829ec2770867c87c6c601c6af))
+
+
+### 📦 Dependencies
+
+* bump @clerk/nextjs from 4.27.5 to 4.27.6 ([a617eb0](https://github.com/TheoEwzZer/TaskManagement/commit/a617eb0a2cacd7b4e002c73f046f03eae9a2e623))
+* bump @clerk/nextjs from 4.27.6 to 4.27.7 ([398462b](https://github.com/TheoEwzZer/TaskManagement/commit/398462b71c6c1d1dad341708f3b9923b59cd3150))
+* bump @clerk/nextjs from 4.27.7 to 4.28.0 ([e2fe7b1](https://github.com/TheoEwzZer/TaskManagement/commit/e2fe7b10a41c227bf6b4f907b622b48d77da4384))
+* bump @clerk/nextjs from 4.28.0 to 4.28.1 ([7cc5a4c](https://github.com/TheoEwzZer/TaskManagement/commit/7cc5a4cf08c13991c8eb7e0af67c4fe52064c775))
+* bump @clerk/nextjs from 4.28.1 to 4.29.0 ([c09282c](https://github.com/TheoEwzZer/TaskManagement/commit/c09282cd43ce699c90d20a1c716b01a2d09bd522))
+* bump @prisma/client from 5.7.0 to 5.7.1 ([d46af6d](https://github.com/TheoEwzZer/TaskManagement/commit/d46af6dcae0a1158bfc199889347a18472fe5fec))
+* bump @tanstack/react-query from 5.12.2 to 5.13.4 ([0369ddb](https://github.com/TheoEwzZer/TaskManagement/commit/0369ddb2605b870f240c7af5caeb7bfab8d372ef))
+* bump @tanstack/react-query from 5.13.4 to 5.14.1 ([85ff0d8](https://github.com/TheoEwzZer/TaskManagement/commit/85ff0d887eac7b9000d0875929e332b943dd4817))
+* bump @tanstack/react-query from 5.14.1 to 5.14.2 ([0212f43](https://github.com/TheoEwzZer/TaskManagement/commit/0212f43d9ea5e763d444fb759f698b4a3d5d3433))
+* bump @types/node from 20.10.4 to 20.10.5 ([f97c68d](https://github.com/TheoEwzZer/TaskManagement/commit/f97c68db042c0d2d7bd71c5691ed03a380e2f01c))
+* bump @types/react from 18.2.42 to 18.2.43 ([72c6276](https://github.com/TheoEwzZer/TaskManagement/commit/72c62766abd5e303468a08e83cae0c21bf79fc00))
+* bump @types/react from 18.2.43 to 18.2.45 ([52832dc](https://github.com/TheoEwzZer/TaskManagement/commit/52832dc5bd245ff79596c396009b4f9f0ee689ae))
+* bump @types/react-dom from 18.2.17 to 18.2.18 ([b90b60f](https://github.com/TheoEwzZer/TaskManagement/commit/b90b60fc20fe58a37b64ed5d340edde2d6fb5802))
+* bump @typescript-eslint/eslint-plugin from 6.13.2 to 6.14.0 ([ba622af](https://github.com/TheoEwzZer/TaskManagement/commit/ba622af2ea8646926e040c7cef56202dc7c1fcd5))
+* bump @typescript-eslint/eslint-plugin from 6.14.0 to 6.15.0 ([95586df](https://github.com/TheoEwzZer/TaskManagement/commit/95586df8427705293c95e3d063e7819c6d7ebbe7))
+* bump @typescript-eslint/parser from 6.13.2 to 6.14.0 ([8249eba](https://github.com/TheoEwzZer/TaskManagement/commit/8249eba7bf6d78f39a56f7b0fec2ee3c74cd971d))
+* bump cssnano from 6.0.1 to 6.0.2 ([a88e342](https://github.com/TheoEwzZer/TaskManagement/commit/a88e342251dd6d426bc2a9ba59f09ccf491d959e))
+* bump eslint from 8.55.0 to 8.56.0 ([c6ae6a2](https://github.com/TheoEwzZer/TaskManagement/commit/c6ae6a205e3a0ba5b61da3f4cfb33af6f541d33c))
+* bump eslint-plugin-prettier from 5.0.1 to 5.1.0 ([7b65eeb](https://github.com/TheoEwzZer/TaskManagement/commit/7b65eeb5f50aa6df9bb5c9825bddb66ce36e9cb5))
+* bump eslint-plugin-prettier from 5.1.0 to 5.1.1 ([ea16407](https://github.com/TheoEwzZer/TaskManagement/commit/ea16407520001c37647e0ca77a1003921243bb76))
+* bump framer-motion from 10.16.15 to 10.16.16 ([ca49474](https://github.com/TheoEwzZer/TaskManagement/commit/ca4947457795141bbaee2f58cb1991e9518acb1d))
+* bump lucide-react from 0.294.0 to 0.295.0 ([5aa6ebb](https://github.com/TheoEwzZer/TaskManagement/commit/5aa6ebbe22bcc2d81fe3266f65cd27b623be4e4c))
+* bump lucide-react from 0.295.0 to 0.298.0 ([c2e1eab](https://github.com/TheoEwzZer/TaskManagement/commit/c2e1eabd1245452f44fed3887e3aeb2967985a60))
+* bump lucide-react from 0.298.0 to 0.299.0 ([1bc8f1d](https://github.com/TheoEwzZer/TaskManagement/commit/1bc8f1dfe72015b9f903e6b33538c269821f7d0e))
+* bump prettier from 3.1.0 to 3.1.1 ([a9609f5](https://github.com/TheoEwzZer/TaskManagement/commit/a9609f52b36138c9a0467d5fafd67ce0f200ab4f))
+* bump prisma from 5.7.0 to 5.7.1 ([5f7db39](https://github.com/TheoEwzZer/TaskManagement/commit/5f7db390a8a00087fd4bc94769b89b01ecf814d8))
+* bump react-hook-form from 7.48.2 to 7.49.0 ([71f07a3](https://github.com/TheoEwzZer/TaskManagement/commit/71f07a33f004c4da6a7793afa4928f80ba908ece))
+* bump react-hook-form from 7.49.0 to 7.49.2 ([90c58c5](https://github.com/TheoEwzZer/TaskManagement/commit/90c58c5e0b17d3c37eeca5642edd29894fce535f))
+* bump stripe from 14.8.0 to 14.9.0 ([7ae3369](https://github.com/TheoEwzZer/TaskManagement/commit/7ae3369e403ac48150a4f41b7481c9cd08d3594c))
+* bump tailwind-merge from 2.1.0 to 2.2.0 ([d4910ab](https://github.com/TheoEwzZer/TaskManagement/commit/d4910ab993c1a4dd65e70189066d1e47be8169b3))
+* bump tailwindcss from 3.3.6 to 3.3.7 ([e84db51](https://github.com/TheoEwzZer/TaskManagement/commit/e84db5191e7e5d681718e48482f9139edbf3af99))
+* bump tailwindcss from 3.3.7 to 3.4.0 ([64de8f3](https://github.com/TheoEwzZer/TaskManagement/commit/64de8f330dd621bbf7b09869a1ab57d929f088d8))
+* bump unsplash-js from 7.0.18 to 7.0.19 ([1d803ab](https://github.com/TheoEwzZer/TaskManagement/commit/1d803ab10540ebcda7a4b0e5792a22a1158dc627))
+* replace framer-motion dependency by embla-carousel ([1492804](https://github.com/TheoEwzZer/TaskManagement/commit/14928042ee9cb250de973ba99d5c23ed08deeb5a))
+
 ## [2.2.0](https://github.com/TheoEwzZer/TaskManagement/compare/v2.1.1...v2.2.0) (2023-12-09)
 
 
