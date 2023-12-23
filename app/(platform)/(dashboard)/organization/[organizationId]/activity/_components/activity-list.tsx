@@ -8,7 +8,7 @@ import { Skeleton } from "@/components/ui/skeleton";
 import { fetcher } from "@/lib/fetcher";
 import { AuditLog } from "@prisma/client";
 import { keepPreviousData, useQuery } from "@tanstack/react-query";
-import { Pagination } from "@/components/pagination";
+import { CustomPagination } from "@/components/pagination";
 
 export interface ActivityLog {
   auditLogs: AuditLog[];
@@ -49,11 +49,6 @@ export function ActivityList(): ReactElement {
     }
   }, [data, router]);
 
-  const onChange: (newPage: number) => void = (newPage: number): void => {
-    setPage(newPage);
-    router.push(`?page=${newPage}`);
-  };
-
   if (!data || isPending) {
     return <ActivityList.Skeleton />;
   }
@@ -73,10 +68,9 @@ export function ActivityList(): ReactElement {
           )
         )}
       </ol>
-      <Pagination
+      <CustomPagination
         page={page}
         count={count}
-        onChange={onChange}
       />
     </>
   );
