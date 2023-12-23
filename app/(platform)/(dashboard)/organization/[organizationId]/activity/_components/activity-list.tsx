@@ -19,7 +19,6 @@ export function ActivityList(): ReactElement {
   const router = useRouter();
   const searchParams: ReadonlyURLSearchParams = useSearchParams();
   const [page, setPage] = useState<number>(0);
-  const [count, setCount] = useState<number>(0);
 
   const pageParam: string | null = searchParams.get("page");
   const pageNumber: number = pageParam ? parseInt(pageParam, 10) : -1;
@@ -31,21 +30,18 @@ export function ActivityList(): ReactElement {
   });
 
   useEffect((): void => {
-    if (pageNumber < 0) {
-      setPage(0);
-      router.push("?page=0");
+    if (!pageNumber || pageNumber <= 0) {
+      setPage(1);
+      router.push("?page=1");
     } else {
       setPage(pageNumber);
     }
   }, [pageNumber, router]);
 
   useEffect((): void => {
-    if (data) {
-      setCount(Math.ceil(data.total / 10));
-    }
     if (data && data.auditLogs.length === 0) {
-      setPage(0);
-      router.push("?page=0");
+      setPage(1);
+      router.push("?page=1");
     }
   }, [data, router]);
 
@@ -69,8 +65,9 @@ export function ActivityList(): ReactElement {
         )}
       </ol>
       <CustomPagination
-        page={page}
-        count={count}
+        currentPage={page}
+        totalCount={data.total}
+        pageSize={10}
       />
     </>
   );

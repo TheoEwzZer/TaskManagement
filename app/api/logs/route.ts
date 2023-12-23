@@ -9,11 +9,15 @@ export async function GET(req: Request): Promise<NextResponse<unknown>> {
     const { userId, orgId } = auth();
     const { searchParams } = new URL(req.url);
     const pageParam: string | null = searchParams.get("page");
-    const page: number = pageParam ? parseInt(pageParam, 10) : 0;
+    let page: number = pageParam ? parseInt(pageParam, 10) - 1 : 0;
     const itemsPerPage = 10;
 
     if (!userId || !orgId) {
       return new NextResponse("Unauthorized", { status: 401 });
+    }
+
+    if (!page || page < 0) {
+      page = 0;
     }
 
     const auditLogs: AuditLog[] = await db.auditLog.findMany({

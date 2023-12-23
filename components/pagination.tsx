@@ -12,91 +12,66 @@ import {
   PaginationPrevious,
 } from "@/components/ui/pagination";
 
-interface PageButtonProps {
-  currentPage: number;
-  targetPage: number;
-  displayValue: number | string;
-}
+import { DOTS, usePagination } from "@/hooks/use-pagination";
 
 interface PaginationProps {
-  page: number;
-  count: number;
+  totalCount: number;
+  siblingCount?: number;
+  currentPage: number;
+  pageSize: number;
 }
 
-function PageButton({
+export function CustomPagination({
+  totalCount,
+  siblingCount = 1,
   currentPage,
-  targetPage,
-  displayValue,
-}: PageButtonProps): ReactElement {
-  const isCurrent: boolean = currentPage === targetPage;
+  pageSize,
+}: PaginationProps): ReactElement | null {
+  const paginationRange: number[] | undefined = usePagination({
+    currentPage,
+    totalCount,
+    siblingCount,
+    pageSize,
+  });
 
-  if (displayValue === "...") {
-    return <PaginationEllipsis />;
+  // If there are less than 2 times in pagination range we shall not render the component
+  if (currentPage === 0 || !paginationRange || paginationRange.length < 2) {
+    return null;
   }
 
-  return (
-    <PaginationItem>
-      <PaginationLink
-        href={`?page=${targetPage}`}
-        isActive={isCurrent}
-      >
-        {displayValue}
-      </PaginationLink>
-    </PaginationItem>
-  );
-}
+  const lastPage: number = paginationRange[paginationRange.length - 1];
 
-export function CustomPagination({ page, count }: PaginationProps): ReactElement {
   return (
-    <Pagination>
+    <Pagination className="my-4">
       <PaginationContent>
-        <PaginationItem>
-          <PaginationPrevious
-            className={cn(page === 0 && "pointer-events-none opacity-50")}
-            href={`?page=${page - 1}`}
-          />
-        </PaginationItem>
-        <PageButton
-          currentPage={page}
-          targetPage={0}
-          displayValue={1}
+        <PaginationPrevious
+          className={cn(currentPage === 1 && "pointer-events-none opacity-50")}
+          href={`?page=${currentPage - 1}`}
         />
-        <PageButton
-          currentPage={page}
-          targetPage={1}
-          displayValue={page > 3 ? "..." : 2}
+        {paginationRange.map((pageNumber: number, index: number): ReactElement => {
+          if (pageNumber === DOTS) {
+            return (
+              <PaginationItem key={index}>
+                <PaginationEllipsis />
+              </PaginationItem>
+            );
+          }
+
+          return (
+            <PaginationLink
+              key={index}
+              isActive={pageNumber === currentPage}
+              href={`?page=${pageNumber}`}
+            >
+              {pageNumber}
+            </PaginationLink>
+          );
+        })}
+
+        <PaginationNext
+          className={cn(currentPage === lastPage && "pointer-events-none opacity-50")}
+          href={`?page=${currentPage + 1}`}
         />
-        <PageButton
-          currentPage={page}
-          targetPage={page < 3 ? 2 : page >= count - 4 ? count - 5 : page - 1}
-          displayValue={page < 3 ? 3 : page >= count - 4 ? count - 4 : page}
-        />
-        <PageButton
-          currentPage={page}
-          targetPage={page < 4 ? 3 : page >= count - 3 ? count - 4 : page}
-          displayValue={page < 4 ? 4 : page >= count - 3 ? count - 3 : page + 1}
-        />
-        <PageButton
-          currentPage={page}
-          targetPage={page < 4 ? 4 : page >= count - 3 ? count - 3 : page + 1}
-          displayValue={page < 4 ? 5 : page >= count - 3 ? count - 2 : page + 2}
-        />
-        <PageButton
-          currentPage={page}
-          targetPage={count - 2}
-          displayValue={count - 4 > page ? "..." : count - 1}
-        />
-        <PageButton
-          currentPage={page}
-          targetPage={count - 1}
-          displayValue={count}
-        />
-        <PaginationItem>
-          <PaginationNext
-            className={cn(page === count - 1 && "pointer-events-none opacity-50")}
-            href={`?page=${page + 1}`}
-          />
-        </PaginationItem>
       </PaginationContent>
     </Pagination>
   );
