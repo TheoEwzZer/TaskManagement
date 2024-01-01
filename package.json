@@ -28,7 +28,7 @@
     "@radix-ui/react-tooltip": "^1.0.7",
     "@tanstack/react-query": "^5.15.3",
     "class-variance-authority": "^0.7.0",
-    "clsx": "^2.0.0",
+    "clsx": "^2.1.0",
     "cmdk": "^0.2.0",
     "date-fns": "^3.0.6",
     "embla-carousel-autoplay": "^8.0.0-rc17",
