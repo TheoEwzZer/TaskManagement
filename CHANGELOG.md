@@ -1,5 +1,53 @@
 # Changelog
 
+## [2.3.1](https://github.com/TheoEwzZer/TaskManagement/compare/v2.3.0...v2.3.1) (2024-01-05)
+
+
+### 🐛 Bug Fixes
+
+* refactor carousel component imports and types ([7c4a89d](https://github.com/TheoEwzZer/TaskManagement/commit/7c4a89da1d0d5313c3939d6fc96ef503c70fb820))
+* update embla-carousel to version 8.0.0-rc18 ([05b22d3](https://github.com/TheoEwzZer/TaskManagement/commit/05b22d398571b479246d500f2ada0cec3bd0ba4e))
+
+
+### 📦 Dependencies
+
+* bump @clerk/nextjs from 4.29.0 to 4.29.1 ([42659d3](https://github.com/TheoEwzZer/TaskManagement/commit/42659d38b72bc6ffc0e0cc215521d970004fd734))
+* bump @hookform/resolvers from 3.3.2 to 3.3.3 ([59e93ae](https://github.com/TheoEwzZer/TaskManagement/commit/59e93aee8863d9bc2b3d1b2db8a7a3aa241de6c2))
+* bump @hookform/resolvers from 3.3.3 to 3.3.4 ([fe44e9e](https://github.com/TheoEwzZer/TaskManagement/commit/fe44e9eed47e7fc48e8f10a5ab892a03fda9e7c1))
+* bump @tanstack/react-query from 5.14.2 to 5.14.6 ([55c5056](https://github.com/TheoEwzZer/TaskManagement/commit/55c50569ec026d5163cbf079a5364b98b67e5eef))
+* bump @tanstack/react-query from 5.14.6 to 5.15.0 ([f268fd7](https://github.com/TheoEwzZer/TaskManagement/commit/f268fd737f96bed3ccfff9815555997e02942724))
+* bump @tanstack/react-query from 5.15.0 to 5.15.3 ([f1a6dd9](https://github.com/TheoEwzZer/TaskManagement/commit/f1a6dd9870a68d3a48c84be91ae29d43ad800fa9))
+* bump @tanstack/react-query from 5.15.3 to 5.17.0 ([6a378bb](https://github.com/TheoEwzZer/TaskManagement/commit/6a378bba1ec30233de563d6a4e9a67c58803e235))
+* bump @tanstack/react-query from 5.17.0 to 5.17.1 ([419f908](https://github.com/TheoEwzZer/TaskManagement/commit/419f90846eec202c22ba41c377c8a8886ddb09a9))
+* bump @types/node from 20.10.5 to 20.10.6 ([8ce5eae](https://github.com/TheoEwzZer/TaskManagement/commit/8ce5eaec95757cd2ba3e07fc347755cf5066e776))
+* bump @types/react from 18.2.45 to 18.2.46 ([2428c5a](https://github.com/TheoEwzZer/TaskManagement/commit/2428c5a3c4bb117fca92944939ada4cb3527af75))
+* bump @typescript-eslint/eslint-plugin from 6.15.0 to 6.16.0 ([134486f](https://github.com/TheoEwzZer/TaskManagement/commit/134486f656524a0de351aa077e178784169b2d80))
+* bump @typescript-eslint/eslint-plugin from 6.16.0 to 6.17.0 ([d598210](https://github.com/TheoEwzZer/TaskManagement/commit/d5982100afc4d920b14850877190a8707765abc6))
+* bump @typescript-eslint/parser from 6.14.0 to 6.16.0 ([f3ad516](https://github.com/TheoEwzZer/TaskManagement/commit/f3ad516fab0e5234bb78e3bffa30476521b51242))
+* bump @typescript-eslint/parser from 6.16.0 to 6.17.0 ([a907a7c](https://github.com/TheoEwzZer/TaskManagement/commit/a907a7c36dcd38045246358da04246f124494931))
+* bump clsx from 2.0.0 to 2.1.0 ([6a81a4a](https://github.com/TheoEwzZer/TaskManagement/commit/6a81a4aa132b439f2b359039212992fe5c6c6fd4))
+* bump cssnano from 6.0.2 to 6.0.3 ([e28297c](https://github.com/TheoEwzZer/TaskManagement/commit/e28297cb1f0ae9744c6cd2462d648a9e774cc5d6))
+* bump date-fns from 2.30.0 to 3.0.6 ([7757d91](https://github.com/TheoEwzZer/TaskManagement/commit/7757d91d8cb55ca3090e8937847178e1c9d8fd69))
+* bump date-fns from 3.0.6 to 3.1.0 ([fb9d9ed](https://github.com/TheoEwzZer/TaskManagement/commit/fb9d9edc3c04e272c3e9b58b087cd1a4e8c9992c))
+* bump embla-carousel-autoplay from 8.0.0-rc17 to 8.0.0-rc18 ([dfa1a2f](https://github.com/TheoEwzZer/TaskManagement/commit/dfa1a2f98b942b25d0a18ee418c42dbe786d5838))
+* bump embla-carousel-react from 8.0.0-rc17 to 8.0.0-rc18 ([3e57e67](https://github.com/TheoEwzZer/TaskManagement/commit/3e57e676f34f0cb52e2f941ecbf5dc3ba9359fce))
+* bump eslint-plugin-prettier from 5.1.1 to 5.1.2 ([2fb8e4f](https://github.com/TheoEwzZer/TaskManagement/commit/2fb8e4f08d5fa89fb3ab6f7d31a00d535852c27a))
+* bump lucide-react from 0.299.0 to 0.302.0 ([5ab2a32](https://github.com/TheoEwzZer/TaskManagement/commit/5ab2a328ef61d4fe1e9156973ff9a42d7a5fde9c))
+* bump lucide-react from 0.302.0 to 0.303.0 ([9caf386](https://github.com/TheoEwzZer/TaskManagement/commit/9caf386083114e026702ede21e97a8a172cf9498))
+* bump lucide-react from 0.303.0 to 0.304.0 ([39519c1](https://github.com/TheoEwzZer/TaskManagement/commit/39519c19a91eb95d707c167cea7763b3221ab5bb))
+* bump postcss from 8.4.32 to 8.4.33 ([814be3f](https://github.com/TheoEwzZer/TaskManagement/commit/814be3f491d9291670fd6320c216d8c83ce0654d))
+* bump prettier-plugin-tailwindcss from 0.5.9 to 0.5.10 ([47509a3](https://github.com/TheoEwzZer/TaskManagement/commit/47509a39019442d1029b2a2c67431067192b1c8d))
+* bump react-day-picker from 8.9.1 to 8.10.0 ([94d294d](https://github.com/TheoEwzZer/TaskManagement/commit/94d294d4055cdd555e107c08ec294b4153796179))
+* bump sonner from 1.2.4 to 1.3.1 ([41d5ff0](https://github.com/TheoEwzZer/TaskManagement/commit/41d5ff0a644c6241c8580de7d581da3fb4962baa))
+* bump stripe from 14.10.0 to 14.11.0 ([8e6dfad](https://github.com/TheoEwzZer/TaskManagement/commit/8e6dfad375b6f6ebc38566e32f2231d0d0b3d53f))
+* bump stripe from 14.9.0 to 14.10.0 ([597f4ac](https://github.com/TheoEwzZer/TaskManagement/commit/597f4acce7f392b4d19909351a0a2dc1de2a63ee))
+* update Embla Carousel dependencies to version 8.0.0-rc18 ([02ab3ea](https://github.com/TheoEwzZer/TaskManagement/commit/02ab3eafc3c4b291a9d282ee7e618740b5d2258f))
+
+
+### 🔀 Merge
+
+* merge branch 'main' of https://github.com/TheoEwzZer/TaskManagement ([a0daa40](https://github.com/TheoEwzZer/TaskManagement/commit/a0daa4066e3d58ee191f6f8354736874d573a0e4))
+
 ## [2.3.0](https://github.com/TheoEwzZer/TaskManagement/compare/v2.2.0...v2.3.0) (2023-12-23)
 
 
