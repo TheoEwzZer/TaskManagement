@@ -1,5 +1,16 @@
 # Changelog
 
+## [2.3.2](https://github.com/TheoEwzZer/TaskManagement/compare/v2.3.1...v2.3.2) (2024-02-01)
+
+
+### 📦 Dependencies
+
+* bump @types/node from 20.11.13 to 20.11.15 ([e35d49a](https://github.com/TheoEwzZer/TaskManagement/commit/e35d49abbaacfe4021976ab6736773b11dce7379))
+* bump @types/react from 18.2.48 to 18.2.51 ([afc1a67](https://github.com/TheoEwzZer/TaskManagement/commit/afc1a676090a770afd403e65494dc7633f9d5bdb))
+* bump react-hook-form from 7.49.3 to 7.50.0 ([90f7c67](https://github.com/TheoEwzZer/TaskManagement/commit/90f7c670a8ab9dede6602bea3f7dca6003e7b1ac))
+* bump usehooks-ts from 2.10.0 to 2.11.0 ([c0e2376](https://github.com/TheoEwzZer/TaskManagement/commit/c0e2376c3e9e49a6132b511602b8ef2600326ff1))
+* bump usehooks-ts from 2.11.0 to 2.12.0 ([65b66ca](https://github.com/TheoEwzZer/TaskManagement/commit/65b66caf647792f1905adb29d2e6ef59eee1b9b2))
+
 ## [2.3.1](https://github.com/TheoEwzZer/TaskManagement/compare/v2.3.0...v2.3.1) (2024-01-05)
 
 
