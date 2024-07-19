@@ -32,7 +32,7 @@
     "cmdk": "^1.0.0",
     "date-fns": "^3.6.0",
     "embla-carousel-autoplay": "^8.1.7",
-    "embla-carousel-react": "^8.1.6",
+    "embla-carousel-react": "^8.1.7",
     "embla-carousel-wheel-gestures": "^8.0.1",
     "lodash": "^4.17.21",
     "lucide-react": "^0.411.0",
