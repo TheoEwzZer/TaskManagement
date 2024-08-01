@@ -1,6 +1,5 @@
 "use server";
 
-import { auth, currentUser } from "@clerk/nextjs";
 import { revalidatePath } from "next/cache";
 import { OrgSubscription } from "@prisma/client";
 
@@ -9,7 +8,7 @@ import { ActionState, createSafeAction } from "@/lib/create-safe-action";
 
 import { StripeRedirect } from "./schema";
 import { InputType, ReturnType } from "./types";
-import { User } from "@clerk/nextjs/server";
+import { User, auth, currentUser } from "@clerk/nextjs/server";
 import { absoluteUrl } from "@/lib/utils";
 import { stripe } from "@/lib/stripe";
 import Stripe from "stripe";

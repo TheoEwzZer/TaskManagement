@@ -1,5 +1,4 @@
-import { auth, currentUser } from "@clerk/nextjs";
-import { User } from "@clerk/nextjs/server";
+import { User, auth, currentUser } from "@clerk/nextjs/server";
 import { ACTION, ENTITY_TYPE } from "@prisma/client";
 import { db } from "./db";
 
