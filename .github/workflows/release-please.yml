@@ -13,38 +13,17 @@ jobs:
   release-please:
     runs-on: ubuntu-latest
     steps:
-      - uses: google-github-actions/release-please-action@v3
+      - uses: googleapis/release-please-action@v4
         id: release
         with:
           release-type: node
-          pull-request-title-pattern: "chore: release${component} ${version}"
-          changelog-types: |
-            [
-              {"type":"feat","section":"✨ Features","hidden":false},
-              {"type":"change","section":"✨ Features","hidden":false},
-              {"type":"deprecate","section":"🔥 Changes","hidden":false},
-              {"type":"remove","section":"🔥 Changes","hidden":false},
-              {"type":"fix","section":"🐛 Bug Fixes","hidden":false},
-              {"type":"revert","section":"⏪️ Reverts","hidden":false},
-              {"type":"security","section":"🔒️ Security","hidden":false},
-              {"type":"perf","section":"⚡️ Performance Improvements","hidden":false},
-              {"type":"refactor","section":"♻️ Code Refactoring","hidden":false},
-              {"type":"style","section":"💄 Styles","hidden":false},
-              {"type":"build","section":"👷 Builds","hidden":false},
-              {"type":"chore","section":"🔧 Other","hidden":false},
-              {"type":"deps","section":"📦 Dependencies","hidden":false},
-              {"type":"ci","section":"⚙️ Continuous Integrations","hidden":false},
-              {"type":"test","section":"✅ Tests","hidden":false},
-              {"type":"docs","section":"📝 Documentation","hidden":false},
-              {"type":"merge","section":"🔀 Merge","hidden":false}
-            ]
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - name: tag major and minor versions
         if: ${{ steps.release.outputs.release_created }}
         run: |
           git config user.name github-actions[bot]
           git config user.email 41898282+github-actions[bot]@users.noreply.github.com
-          git remote add gh-token "https://${{ secrets.GITHUB_TOKEN }}@github.com/google-github-actions/release-please-action.git"
+          git remote add gh-token "https://${{ secrets.GITHUB_TOKEN }}@github.com/googleapis/release-please-action.git"
           git tag -d v${{ steps.release.outputs.major }} || true
           git tag -d v${{ steps.release.outputs.major }}.${{ steps.release.outputs.minor }} || true
           git push origin :v${{ steps.release.outputs.major }} || true

@@ -1,0 +1,32 @@
+{
+  "packages": {
+    ".": {
+      "changelog-path": "CHANGELOG.md",
+      "release-type": "node",
+      "bump-minor-pre-major": false,
+      "bump-patch-for-minor-pre-major": false,
+      "draft": false,
+      "prerelease": false,
+      "pull-request-title-pattern": "chore: release${component} ${version}",
+      "changelog-sections": [
+        { "type": "feat", "section": "✨ Features" },
+        { "type": "change", "section": "✨ Features" },
+        { "type": "deprecate", "section": "🔥 Changes" },
+        { "type": "remove", "section": "🔥 Changes" },
+        { "type": "fix", "section": "🐛 Bug Fixes" },
+        { "type": "revert", "section": "⏪️ Reverts" },
+        { "type": "security", "section": "🔒️ Security" },
+        { "type": "perf", "section": "⚡️ Performance Improvements" },
+        { "type": "refactor", "section": "♻️ Code Refactoring" },
+        { "type": "style", "section": "💄 Styles" },
+        { "type": "build", "section": "👷 Builds" },
+        { "type": "chore", "section": "🔧 Other" },
+        { "type": "deps", "section": "📦 Dependencies" },
+        { "type": "ci", "section": "⚙️ Continuous Integrations" },
+        { "type": "test", "section": "✅ Tests" },
+        { "type": "docs", "section": "📝 Documentation" }
+      ]
+    }
+  },
+  "$schema": "https://raw.githubusercontent.com/googleapis/release-please/main/schemas/config.json"
+}
