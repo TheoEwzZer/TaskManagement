@@ -38,7 +38,7 @@ export async function GET(req: Request): Promise<NextResponse<unknown>> {
     });
 
     return NextResponse.json({ auditLogs, total: totalAuditLogs });
-  } catch (error) {
+  } catch {
     return new NextResponse("Internal Server Error", { status: 500 });
   }
 }
