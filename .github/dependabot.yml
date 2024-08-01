@@ -12,4 +12,4 @@ updates:
     commit-message:
       prefix: "deps"
     schedule:
-      interval: "daily"
+      interval: "weekly"
