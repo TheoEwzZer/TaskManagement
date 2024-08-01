@@ -49,10 +49,8 @@ export function CardDueDate({ data }: CardDueDateProps): ReactElement {
       if (date.toISOString() === new Date(data.dueDate).toISOString()) {
         return;
       }
-    } else {
-      if (!date && !data.dueDate) {
-        return;
-      }
+    } else if (!date && !data.dueDate) {
+      return;
     }
 
     if (date) {
@@ -107,7 +105,6 @@ export function CardDueDate({ data }: CardDueDateProps): ReactElement {
           mode="single"
           selected={date}
           onSelect={setDate}
-          initialFocus
         />
         <Button
           onClick={updateDate}

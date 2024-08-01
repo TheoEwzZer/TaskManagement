@@ -3,7 +3,6 @@
 
 import { ComponentProps, ReactElement } from "react";
 
-import { ChevronLeft, ChevronRight } from "lucide-react";
 import { DayPicker } from "react-day-picker";
 
 import { cn } from "@/lib/utils";
@@ -52,10 +51,6 @@ function Calendar({
         day_range_middle: "aria-selected:bg-accent aria-selected:text-accent-foreground",
         day_hidden: "invisible",
         ...classNames,
-      }}
-      components={{
-        IconLeft: (): ReactElement => <ChevronLeft className="h-4 w-4" />,
-        IconRight: (): ReactElement => <ChevronRight className="h-4 w-4" />,
       }}
       {...props}
     />

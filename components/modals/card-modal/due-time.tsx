@@ -59,10 +59,8 @@ export function DueDate({ data }: DueDateProps): ReactElement | null {
       if (date.toISOString() === new Date(data.dueDate).toISOString()) {
         return;
       }
-    } else {
-      if (!date && !data.dueDate) {
-        return;
-      }
+    } else if (!date && !data.dueDate) {
+      return;
     }
 
     if (date) {
@@ -119,22 +117,20 @@ export function DueDate({ data }: DueDateProps): ReactElement | null {
       setHoverDescription("This card is complete.");
       setBadgeDescription("Complete");
       setBadgeVariant("success");
-    } else {
-      if (date && isPast(date)) {
-        setHoverDescription("This card is past due.");
-        setBadgeDescription("Overdue");
-        setBadgeVariant("destructive");
-      } else if (
-        date &&
-        isWithinInterval(date, {
-          start: new Date(),
-          end: add(new Date(), { hours: 24 }),
-        })
-      ) {
-        setHoverDescription("This card is due in less than 24 hours.");
-        setBadgeDescription("Due soon");
-        setBadgeVariant("destructive");
-      }
+    } else if (date && isPast(date)) {
+      setHoverDescription("This card is past due.");
+      setBadgeDescription("Overdue");
+      setBadgeVariant("destructive");
+    } else if (
+      date &&
+      isWithinInterval(date, {
+        start: new Date(),
+        end: add(new Date(), { hours: 24 }),
+      })
+    ) {
+      setHoverDescription("This card is due in less than 24 hours.");
+      setBadgeDescription("Due soon");
+      setBadgeVariant("destructive");
     }
     setIsChecked(!isChecked);
   };
@@ -148,22 +144,20 @@ export function DueDate({ data }: DueDateProps): ReactElement | null {
       setHoverDescription("This card is complete.");
       setBadgeDescription("Complete");
       setBadgeVariant("success");
-    } else {
-      if (date && isPast(date)) {
-        setHoverDescription("This card is past due.");
-        setBadgeDescription("Overdue");
-        setBadgeVariant("destructive");
-      } else if (
-        date &&
-        isWithinInterval(date, {
-          start: new Date(),
-          end: add(new Date(), { hours: 24 }),
-        })
-      ) {
-        setHoverDescription("This card is due in less than 24 hours.");
-        setBadgeDescription("Due soon");
-        setBadgeVariant("destructive");
-      }
+    } else if (date && isPast(date)) {
+      setHoverDescription("This card is past due.");
+      setBadgeDescription("Overdue");
+      setBadgeVariant("destructive");
+    } else if (
+      date &&
+      isWithinInterval(date, {
+        start: new Date(),
+        end: add(new Date(), { hours: 24 }),
+      })
+    ) {
+      setHoverDescription("This card is due in less than 24 hours.");
+      setBadgeDescription("Due soon");
+      setBadgeVariant("destructive");
     }
   }, [date, isChecked]);
 
@@ -259,7 +253,6 @@ export function DueDate({ data }: DueDateProps): ReactElement | null {
             mode="single"
             selected={date}
             onSelect={setDate}
-            initialFocus
           />
           <Button
             onClick={updateDate}

@@ -22,7 +22,11 @@ import { useAction } from "@/hooks/use-action";
 import { cn } from "@/lib/utils";
 import { CardWithListTitle } from "@/types";
 import { useOrganization } from "@clerk/nextjs";
-import type { OrganizationMembershipResource, PublicUserData } from "@clerk/types";
+import type {
+  OrganizationMembershipResource,
+  PublicUserData,
+  ClerkPaginatedResponse,
+} from "@clerk/types";
 import { Card } from "@prisma/client";
 import { useQueryClient } from "@tanstack/react-query";
 import { Check, UserRoundPlus, X } from "lucide-react";
@@ -38,13 +42,15 @@ export function CardMember({ data }: ActionProps): ReactElement {
   const queryClient = useQueryClient();
   const { organization: activeOrganization } = useOrganization();
   const [members, setMembers] = useState<PublicUserData[]>([]);
-  const [value, setValue] = useState<string>(data.userId || "");
+  const [value, setValue] = useState<string>(data.userId ?? "");
 
   useEffect((): void => {
     const fetchMembers: () => Promise<void> = async (): Promise<void> => {
       if (activeOrganization) {
-        const memberships: OrganizationMembershipResource[] =
+        const response: ClerkPaginatedResponse<OrganizationMembershipResource> =
           await activeOrganization.getMemberships();
+        const memberships: OrganizationMembershipResource[] = response.data;
+
         const members: PublicUserData[] = memberships
           .filter((membership: OrganizationMembershipResource): boolean =>
             Boolean(membership.publicUserData.userId)
