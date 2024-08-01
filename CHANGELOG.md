@@ -1,5 +1,13 @@
 # Changelog
 
+## 1.0.0 (2024-08-01)
+
+
+### Bug Fixes
+
+* fix conditional logic in CardDueDate and DueDate components ([7bd0bf3](https://github.com/TheoEwzZer/TaskManagement/commit/7bd0bf373766154da20bdb84f38d7ba7e77871b4))
+* fix import ([7cffa53](https://github.com/TheoEwzZer/TaskManagement/commit/7cffa53f505de25278cdc1ce49afeb553aed001f))
+
 ## [2.3.2](https://github.com/TheoEwzZer/TaskManagement/compare/v2.3.1...v2.3.2) (2024-02-01)
 
 
