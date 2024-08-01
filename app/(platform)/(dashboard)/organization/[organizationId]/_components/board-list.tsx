@@ -1,7 +1,7 @@
 import { ReactElement } from "react";
 
 import Link from "next/link";
-import { auth } from "@clerk/nextjs";
+import { auth } from "@clerk/nextjs/server";
 import { redirect } from "next/navigation";
 import { HelpCircle, User2 } from "lucide-react";
 
